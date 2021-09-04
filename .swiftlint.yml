@@ -1,0 +1,11 @@
+identifier_name:
+  min_length: 2
+
+disabled_rules:
+  - line_length
+
+excluded: 
+  - MinderaiOSChallengeUITests
+  - Carthage
+  - fastlane
+  

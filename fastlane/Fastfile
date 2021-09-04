@@ -1,0 +1,28 @@
+fastlane_require 'yaml'
+
+default_platform(:ios)
+
+platform :ios do
+
+  desc "Run lint on the code"
+  lane :lint do
+    sh "mkdir -p lint_output"
+    sh "touch lint_output/lint_output.json"
+    swiftlint(
+      mode: :lint,
+      config_file: ".swiftlint.yml", 
+      output_file: "fastlane/lint_output/lint_output.json"
+    )
+    sh "cat lint_output/lint_output.json"
+  end
+
+  desc "Run all Unit Tests"
+  lane :test do
+    scan(scheme: "SuperheroSquadMakerTests")
+  end
+
+  desc "Run all UI Tests"
+  lane :ui_test do
+    scan(scheme: "SuperheroSquadMakerUITests", reset_simulator: true, disable_concurrent_testing: true)
+  end
+end
