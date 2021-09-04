@@ -31,6 +31,7 @@
 		353B451326E38D89008607A5 /* apiMarvel.der in Resources */ = {isa = PBXBuildFile; fileRef = 353B451226E38D89008607A5 /* apiMarvel.der */; };
 		353B451826E38EE0008607A5 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B451726E38EE0008607A5 /* Service.swift */; };
 		353B452226E3941B008607A5 /* FileStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B452126E3941B008607A5 /* FileStorageManager.swift */; };
+		353B452426E39452008607A5 /* LocalCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B452326E39452008607A5 /* LocalCacheManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		353B451226E38D89008607A5 /* apiMarvel.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = apiMarvel.der; sourceTree = SOURCE_ROOT; };
 		353B451726E38EE0008607A5 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		353B452126E3941B008607A5 /* FileStorageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileStorageManager.swift; sourceTree = "<group>"; };
+		353B452326E39452008607A5 /* LocalCacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalCacheManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +196,7 @@
 		353B44EE26E38190008607A5 /* Cache */ = {
 			isa = PBXGroup;
 			children = (
+				353B452326E39452008607A5 /* LocalCacheManager.swift */,
 				353B44EF26E38198008607A5 /* CacheManager.swift */,
 			);
 			path = Cache;
@@ -391,6 +394,7 @@
 				353B450626E38A84008607A5 /* NetworkProvider.swift in Sources */,
 				353B450326E388C5008607A5 /* main.swift in Sources */,
 				353B44B926E37F2D008607A5 /* SceneDelegate.swift in Sources */,
+				353B452426E39452008607A5 /* LocalCacheManager.swift in Sources */,
 				353B451026E38BA9008607A5 /* ApiError.swift in Sources */,
 				353B44ED26E3808C008607A5 /* URLBuilder.swift in Sources */,
 				353B44F026E38198008607A5 /* CacheManager.swift in Sources */,
