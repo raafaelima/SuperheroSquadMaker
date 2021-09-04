@@ -46,6 +46,10 @@
 		353B455226E3D1B5008607A5 /* ComicsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B455126E3D1B5008607A5 /* ComicsResponse.swift */; };
 		353B455426E3D242008607A5 /* ItemsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B455326E3D242008607A5 /* ItemsResponse.swift */; };
 		353B455726E3D45B008607A5 /* Superhero+ParseFromResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B455626E3D45B008607A5 /* Superhero+ParseFromResponse.swift */; };
+		353B455C26E3DC24008607A5 /* SuperheroParseFromResponseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B455B26E3DC24008607A5 /* SuperheroParseFromResponseTest.swift */; };
+		353B455F26E3DCFB008607A5 /* superhero.json in Resources */ = {isa = PBXBuildFile; fileRef = 353B455E26E3DCFB008607A5 /* superhero.json */; };
+		353B456226E3DD67008607A5 /* JSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B456126E3DD67008607A5 /* JSONHelper.swift */; };
+		353B456426E3DF82008607A5 /* superheroWithoutThumbnail.json in Resources */ = {isa = PBXBuildFile; fileRef = 353B456326E3DF82008607A5 /* superheroWithoutThumbnail.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +116,10 @@
 		353B455126E3D1B5008607A5 /* ComicsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsResponse.swift; sourceTree = "<group>"; };
 		353B455326E3D242008607A5 /* ItemsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsResponse.swift; sourceTree = "<group>"; };
 		353B455626E3D45B008607A5 /* Superhero+ParseFromResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Superhero+ParseFromResponse.swift"; sourceTree = "<group>"; };
+		353B455B26E3DC24008607A5 /* SuperheroParseFromResponseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroParseFromResponseTest.swift; sourceTree = "<group>"; };
+		353B455E26E3DCFB008607A5 /* superhero.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = superhero.json; sourceTree = "<group>"; };
+		353B456126E3DD67008607A5 /* JSONHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONHelper.swift; sourceTree = "<group>"; };
+		353B456326E3DF82008607A5 /* superheroWithoutThumbnail.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = superheroWithoutThumbnail.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +189,9 @@
 		353B44CC26E37F2F008607A5 /* SuperheroSquadMakerTests */ = {
 			isa = PBXGroup;
 			children = (
+				353B456026E3DD56008607A5 /* Helpers */,
+				353B455D26E3DC88008607A5 /* JSONMocks */,
+				353B455A26E3DC13008607A5 /* Extensions */,
 				353B453326E3BC65008607A5 /* Configurations */,
 				353B452B26E3A286008607A5 /* Network */,
 				353B44CD26E37F2F008607A5 /* SuperheroSquadMakerTests.swift */,
@@ -351,6 +362,31 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		353B455A26E3DC13008607A5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				353B455B26E3DC24008607A5 /* SuperheroParseFromResponseTest.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		353B455D26E3DC88008607A5 /* JSONMocks */ = {
+			isa = PBXGroup;
+			children = (
+				353B456326E3DF82008607A5 /* superheroWithoutThumbnail.json */,
+				353B455E26E3DCFB008607A5 /* superhero.json */,
+			);
+			path = JSONMocks;
+			sourceTree = "<group>";
+		};
+		353B456026E3DD56008607A5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				353B456126E3DD67008607A5 /* JSONHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -465,6 +501,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				353B455F26E3DCFB008607A5 /* superhero.json in Resources */,
+				353B456426E3DF82008607A5 /* superheroWithoutThumbnail.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,7 +560,9 @@
 				353B453E26E3C413008607A5 /* AppConfigurationTest.swift in Sources */,
 				353B44FD26E3885A008607A5 /* TestingAppDelegate.swift in Sources */,
 				353B44CE26E37F2F008607A5 /* SuperheroSquadMakerTests.swift in Sources */,
+				353B456226E3DD67008607A5 /* JSONHelper.swift in Sources */,
 				353B450126E3888D008607A5 /* TestingRootViewController.swift in Sources */,
+				353B455C26E3DC24008607A5 /* SuperheroParseFromResponseTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

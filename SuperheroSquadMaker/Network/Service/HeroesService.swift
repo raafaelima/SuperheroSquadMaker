@@ -17,7 +17,7 @@ class HeroesService: Service {
         self.networkProvider = networkProvider
     }
 
-    func getAllCharacters(completion: @escaping ([Superhero]) -> Void) {
+    func getAllSuperheroes(completion: @escaping ([Superhero]) -> Void) {
         let endpoint = AllHeroesEndpoint()
         networkProvider.requestData(from: endpoint) { (result: Result<MarvelResponse<SuperheroResponse>, ApiError>) in
             switch result {

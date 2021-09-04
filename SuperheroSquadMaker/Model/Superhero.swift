@@ -12,5 +12,5 @@ struct Superhero {
     let name: String
     let description: String
     let modified: String
-    let resourceURI: String
+    let thumbnailURL: String
 }

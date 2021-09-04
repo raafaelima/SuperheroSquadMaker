@@ -14,7 +14,15 @@ extension SuperheroResponse {
             name: self.name,
             description: self.description,
             modified: self.modified,
-            resourceURI: self.resourceURI
+            thumbnailURL: thumbnailURL()
         )
+    }
+
+    private func thumbnailURL() -> String {
+        guard let path = self.thumbnail?.path, let ext = self.thumbnail?.ext else {
+            return ""
+        }
+
+        return path + "/portrait_incredible." + ext
     }
 }

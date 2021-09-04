@@ -9,9 +9,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    private let service = HeroesService()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        service.getAllSuperheroes { heroes in
+            print(heroes.count)
+        }
     }
-
 }
