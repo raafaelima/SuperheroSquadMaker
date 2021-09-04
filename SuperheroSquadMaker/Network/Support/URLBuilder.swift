@@ -17,7 +17,7 @@ struct URLBuilder: URLBuilding {
     private var timestamp = String(Date().timeIntervalSince1970)
 
     func build(to path: String = "", with params: [URLQueryItem] = []) -> URL {
-        let host = AppConfiguration.sharedInstance.baseHost
+        let host = AppConfiguration.shared.baseHost
         var components = URLComponents(string: host + path)
         components?.queryItems = baseRequestQueryItens()
         components?.queryItems?.append(contentsOf: params)
@@ -40,10 +40,10 @@ struct URLBuilder: URLBuilding {
     }
 
     private func apiKey() -> String {
-        return AppConfiguration.sharedInstance.apiKey
+        return AppConfiguration.shared.apiKey
     }
 
     private func privateApiKey() -> String {
-        return AppConfiguration.sharedInstance.privateApiKey
+        return AppConfiguration.shared.privateApiKey
     }
 }

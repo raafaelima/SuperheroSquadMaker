@@ -8,7 +8,7 @@
 import Foundation
 
 struct AppConfiguration {
-    static var sharedInstance: AppConfiguration {
+    static var shared: AppConfiguration {
 
         struct Static {
             static let instance = AppConfiguration()
