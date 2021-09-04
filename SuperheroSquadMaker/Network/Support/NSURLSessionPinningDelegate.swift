@@ -42,4 +42,3 @@ class NSURLSessionPinningDelegate: NSObject, URLSessionDelegate {
         completionHandler(URLSession.AuthChallengeDisposition.cancelAuthenticationChallenge, nil)
     }
 }
-

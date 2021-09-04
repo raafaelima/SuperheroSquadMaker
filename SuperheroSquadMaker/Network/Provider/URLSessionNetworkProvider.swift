@@ -21,20 +21,20 @@ struct URLSessionNetworkProvider: NetworkProvider {
 
         let session = URLSession(configuration: URLSessionConfiguration.ephemeral, delegate: NSURLSessionPinningDelegate(), delegateQueue: nil)
 
-        let remoteDataTask = session.dataTask(with: endpoint.urlRequest()) { data, _, error in
+        let remoteDataTask = session.dataTask(with: endpoint.urlRequest()) { data, _, _ in
 
             guard let receivedData = data else {
                 completion(.failure(.emptyData))
                 return
             }
 
-            //TODO: Define location of cache being saved
+            // TODO: Define location of cache being saved
             self.cacheManager.save(onCache: receivedData, at: "")
             self.process(data: receivedData, completion)
         }
 
         if self.reachability.currentStatus() == .notReachable {
-            //TODO: Define location of cache being loaded
+            // TODO: Define location of cache being loaded
             let cachedData = cacheManager.load(from: "")
             process(data: cachedData, completion)
         } else {
