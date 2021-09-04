@@ -50,6 +50,11 @@
 		353B455F26E3DCFB008607A5 /* superhero.json in Resources */ = {isa = PBXBuildFile; fileRef = 353B455E26E3DCFB008607A5 /* superhero.json */; };
 		353B456226E3DD67008607A5 /* JSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B456126E3DD67008607A5 /* JSONHelper.swift */; };
 		353B456426E3DF82008607A5 /* superheroWithoutThumbnail.json in Resources */ = {isa = PBXBuildFile; fileRef = 353B456326E3DF82008607A5 /* superheroWithoutThumbnail.json */; };
+		353B456626E43116008607A5 /* heroesList.json in Resources */ = {isa = PBXBuildFile; fileRef = 353B456526E43116008607A5 /* heroesList.json */; };
+		353B456926E4316E008607A5 /* SuperheroResponseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B456826E4316E008607A5 /* SuperheroResponseTest.swift */; };
+		353B456B26E43277008607A5 /* MarvelResponseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B456A26E43277008607A5 /* MarvelResponseTest.swift */; };
+		353B456D26E433A0008607A5 /* MarvelDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B456C26E433A0008607A5 /* MarvelDataTest.swift */; };
+		353B456F26E433F9008607A5 /* marvelData.json in Resources */ = {isa = PBXBuildFile; fileRef = 353B456E26E433F9008607A5 /* marvelData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +125,11 @@
 		353B455E26E3DCFB008607A5 /* superhero.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = superhero.json; sourceTree = "<group>"; };
 		353B456126E3DD67008607A5 /* JSONHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONHelper.swift; sourceTree = "<group>"; };
 		353B456326E3DF82008607A5 /* superheroWithoutThumbnail.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = superheroWithoutThumbnail.json; sourceTree = "<group>"; };
+		353B456526E43116008607A5 /* heroesList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = heroesList.json; sourceTree = "<group>"; };
+		353B456826E4316E008607A5 /* SuperheroResponseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroResponseTest.swift; sourceTree = "<group>"; };
+		353B456A26E43277008607A5 /* MarvelResponseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelResponseTest.swift; sourceTree = "<group>"; };
+		353B456C26E433A0008607A5 /* MarvelDataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelDataTest.swift; sourceTree = "<group>"; };
+		353B456E26E433F9008607A5 /* marvelData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = marvelData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -292,6 +302,7 @@
 		353B452B26E3A286008607A5 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				353B456726E43156008607A5 /* Response */,
 				353B452C26E3A28B008607A5 /* Support */,
 			);
 			path = Network;
@@ -373,8 +384,10 @@
 		353B455D26E3DC88008607A5 /* JSONMocks */ = {
 			isa = PBXGroup;
 			children = (
+				353B456E26E433F9008607A5 /* marvelData.json */,
 				353B456326E3DF82008607A5 /* superheroWithoutThumbnail.json */,
 				353B455E26E3DCFB008607A5 /* superhero.json */,
+				353B456526E43116008607A5 /* heroesList.json */,
 			);
 			path = JSONMocks;
 			sourceTree = "<group>";
@@ -385,6 +398,16 @@
 				353B456126E3DD67008607A5 /* JSONHelper.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		353B456726E43156008607A5 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				353B456826E4316E008607A5 /* SuperheroResponseTest.swift */,
+				353B456A26E43277008607A5 /* MarvelResponseTest.swift */,
+				353B456C26E433A0008607A5 /* MarvelDataTest.swift */,
+			);
+			path = Response;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -501,8 +524,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				353B456F26E433F9008607A5 /* marvelData.json in Resources */,
 				353B455F26E3DCFB008607A5 /* superhero.json in Resources */,
 				353B456426E3DF82008607A5 /* superheroWithoutThumbnail.json in Resources */,
+				353B456626E43116008607A5 /* heroesList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,12 +582,15 @@
 			files = (
 				353B44FF26E38871008607A5 /* TestingSceneDelegate.swift in Sources */,
 				353B454226E3CA1B008607A5 /* UrlBuilderTest.swift in Sources */,
+				353B456D26E433A0008607A5 /* MarvelDataTest.swift in Sources */,
 				353B453E26E3C413008607A5 /* AppConfigurationTest.swift in Sources */,
 				353B44FD26E3885A008607A5 /* TestingAppDelegate.swift in Sources */,
 				353B44CE26E37F2F008607A5 /* SuperheroSquadMakerTests.swift in Sources */,
 				353B456226E3DD67008607A5 /* JSONHelper.swift in Sources */,
 				353B450126E3888D008607A5 /* TestingRootViewController.swift in Sources */,
 				353B455C26E3DC24008607A5 /* SuperheroParseFromResponseTest.swift in Sources */,
+				353B456926E4316E008607A5 /* SuperheroResponseTest.swift in Sources */,
+				353B456B26E43277008607A5 /* MarvelResponseTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,13 +18,6 @@ class SuperheroParseFromResponseTest: XCTestCase {
         sut = JSONHelper.getObjectFrom(json: "superhero", type: SuperheroResponse.self)!
     }
 
-    func testResponseWillParseTheCorrectDataFromServerResponse() throws {
-        XCTAssertEqual(sut.id, 1017100)
-        XCTAssertEqual(sut.name, "A-Bomb (HAS)")
-        XCTAssertTrue(sut.description.contains("Rick Jones has been Hulk's best bud since day one"))
-        XCTAssertNotNil(sut.thumbnail)
-    }
-
     func testThumbnailURLCreationIsCorrect() throws {
         XCTAssertEqual(sut.parse().thumbnailURL, "http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16/portrait_incredible.jpg")
     }
@@ -33,4 +26,13 @@ class SuperheroParseFromResponseTest: XCTestCase {
         sut = JSONHelper.getObjectFrom(json: "superheroWithoutThumbnail", type: SuperheroResponse.self)!
         XCTAssertEqual(sut.parse().thumbnailURL, "")
     }
+
+    func testParseResponseToModel() throws {
+        let model = sut.parse()
+        XCTAssertEqual(model.id, sut.id)
+        XCTAssertEqual(model.name, sut.name)
+        XCTAssertEqual(model.description, sut.description)
+        XCTAssertEqual(model.modified, sut.modified)
+    }
+
 }
