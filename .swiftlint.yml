@@ -5,7 +5,7 @@ disabled_rules:
   - line_length
 
 excluded: 
-  - MinderaiOSChallengeUITests
+  - SuperheroSquadMakerUITests
   - Carthage
   - fastlane
   

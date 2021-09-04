@@ -7,8 +7,6 @@
 
 import Foundation
 
-import Foundation
-
 extension Endpoint {
     func urlRequest() -> URLRequest {
         let builder: URLBuilding = URLBuilder()

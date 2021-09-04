@@ -6,14 +6,12 @@ platform :ios do
 
   desc "Run lint on the code"
   lane :lint do
-    sh "mkdir -p lint_output"
-    sh "touch lint_output/lint_output.json"
     swiftlint(
       mode: :lint,
       config_file: ".swiftlint.yml", 
-      output_file: "fastlane/lint_output/lint_output.json"
+      output_file: "fastlane/lint_output/lint_output.json",
+      raise_if_swiftlint_error: true
     )
-    sh "cat lint_output/lint_output.json"
   end
 
   desc "Run all Unit Tests"
