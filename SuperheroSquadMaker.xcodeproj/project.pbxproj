@@ -30,6 +30,7 @@
 		353B451026E38BA9008607A5 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B450F26E38BA9008607A5 /* ApiError.swift */; };
 		353B451326E38D89008607A5 /* apiMarvel.der in Resources */ = {isa = PBXBuildFile; fileRef = 353B451226E38D89008607A5 /* apiMarvel.der */; };
 		353B451826E38EE0008607A5 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B451726E38EE0008607A5 /* Service.swift */; };
+		353B452226E3941B008607A5 /* FileStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B452126E3941B008607A5 /* FileStorageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		353B450F26E38BA9008607A5 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		353B451226E38D89008607A5 /* apiMarvel.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = apiMarvel.der; sourceTree = SOURCE_ROOT; };
 		353B451726E38EE0008607A5 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		353B452126E3941B008607A5 /* FileStorageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileStorageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +202,7 @@
 		353B44F326E381C6008607A5 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
+				353B452126E3941B008607A5 /* FileStorageManager.swift */,
 				353B44F426E381D5008607A5 /* StorageManager.swift */,
 			);
 			path = Storage;
@@ -379,6 +382,7 @@
 				353B450E26E38B1E008607A5 /* Endpoint+UrlRequest.swift in Sources */,
 				353B44BB26E37F2D008607A5 /* ViewController.swift in Sources */,
 				353B44B726E37F2D008607A5 /* AppDelegate.swift in Sources */,
+				353B452226E3941B008607A5 /* FileStorageManager.swift in Sources */,
 				353B44E926E37FD9008607A5 /* NSURLSessionPinningDelegate.swift in Sources */,
 				353B450926E38A9B008607A5 /* Endpoint.swift in Sources */,
 				353B451826E38EE0008607A5 /* Service.swift in Sources */,
