@@ -12,7 +12,6 @@
 		353B44BE26E37F2D008607A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 353B44BC26E37F2D008607A5 /* Main.storyboard */; };
 		353B44C026E37F2E008607A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 353B44BF26E37F2E008607A5 /* Assets.xcassets */; };
 		353B44C326E37F2E008607A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 353B44C126E37F2E008607A5 /* LaunchScreen.storyboard */; };
-		353B44CE26E37F2F008607A5 /* SuperheroSquadMakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B44CD26E37F2F008607A5 /* SuperheroSquadMakerTests.swift */; };
 		353B44D926E37F2F008607A5 /* SuperheroSquadMakerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B44D826E37F2F008607A5 /* SuperheroSquadMakerUITests.swift */; };
 		353B44E926E37FD9008607A5 /* NSURLSessionPinningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B44E826E37FD9008607A5 /* NSURLSessionPinningDelegate.swift */; };
 		353B44EB26E37FF6008607A5 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B44EA26E37FF6008607A5 /* Reachability.swift */; };
@@ -42,8 +41,6 @@
 		353B454C26E3CEA9008607A5 /* MarvelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B454B26E3CEA9008607A5 /* MarvelData.swift */; };
 		353B454E26E3D05A008607A5 /* SuperheroResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B454D26E3D05A008607A5 /* SuperheroResponse.swift */; };
 		353B455026E3D10D008607A5 /* ThumbnailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B454F26E3D10D008607A5 /* ThumbnailResponse.swift */; };
-		353B455226E3D1B5008607A5 /* ComicsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B455126E3D1B5008607A5 /* ComicsResponse.swift */; };
-		353B455426E3D242008607A5 /* ItemsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B455326E3D242008607A5 /* ItemsResponse.swift */; };
 		353B455726E3D45B008607A5 /* Superhero+ParseFromResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B455626E3D45B008607A5 /* Superhero+ParseFromResponse.swift */; };
 		353B455C26E3DC24008607A5 /* SuperheroParseFromResponseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B455B26E3DC24008607A5 /* SuperheroParseFromResponseTest.swift */; };
 		353B455F26E3DCFB008607A5 /* superhero.json in Resources */ = {isa = PBXBuildFile; fileRef = 353B455E26E3DCFB008607A5 /* superhero.json */; };
@@ -64,6 +61,17 @@
 		35B78A0C26E544FF00784D46 /* SuperheroEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B78A0B26E544FF00784D46 /* SuperheroEndpoint.swift */; };
 		35B78A1026E5482300784D46 /* AllHeroesEndpointTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B78A0F26E5482300784D46 /* AllHeroesEndpointTest.swift */; };
 		35B78A1226E548F900784D46 /* SuperheroEndpointTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B78A1126E548F900784D46 /* SuperheroEndpointTest.swift */; };
+		35B78A1426E54D6800784D46 /* SuperHeroDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B78A1326E54D6800784D46 /* SuperHeroDetailsViewController.swift */; };
+		35B78A1B26E55FD500784D46 /* SuperHeroViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B78A1A26E55FD500784D46 /* SuperHeroViewControllerTest.swift */; };
+		35B78A1D26E561E400784D46 /* SuperHeroDetailsViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B78A1C26E561E400784D46 /* SuperHeroDetailsViewControllerTest.swift */; };
+		35B78A2126E5651500784D46 /* SuperHeroViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B78A2026E5651500784D46 /* SuperHeroViewControllerMock.swift */; };
+		35B78A2526E565B800784D46 /* HeroesServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B78A2426E565B800784D46 /* HeroesServiceMock.swift */; };
+		35B78A2726E566A000784D46 /* SuperHeroPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B78A2626E566A000784D46 /* SuperHeroPresenterTest.swift */; };
+		35B78A2926E5679E00784D46 /* HeroesServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B78A2826E5679E00784D46 /* HeroesServiceTest.swift */; };
+		35B78A2D26E567D100784D46 /* URLSessionNetworkProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B78A2C26E567D100784D46 /* URLSessionNetworkProviderMock.swift */; };
+		35B78A3126E568F200784D46 /* CacheManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B78A3026E568F200784D46 /* CacheManagerMock.swift */; };
+		35B78A3526E5692B00784D46 /* ReachabilityMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B78A3426E5692B00784D46 /* ReachabilityMock.swift */; };
+		35B78A3726E56A9700784D46 /* LocalCacheManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B78A3626E56A9700784D46 /* LocalCacheManagerTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,7 +100,6 @@
 		353B44C226E37F2E008607A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		353B44C426E37F2E008607A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		353B44C926E37F2F008607A5 /* SuperheroSquadMakerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperheroSquadMakerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		353B44CD26E37F2F008607A5 /* SuperheroSquadMakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroSquadMakerTests.swift; sourceTree = "<group>"; };
 		353B44CF26E37F2F008607A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		353B44D426E37F2F008607A5 /* SuperheroSquadMakerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperheroSquadMakerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		353B44D826E37F2F008607A5 /* SuperheroSquadMakerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroSquadMakerUITests.swift; sourceTree = "<group>"; };
@@ -126,8 +133,6 @@
 		353B454B26E3CEA9008607A5 /* MarvelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelData.swift; sourceTree = "<group>"; };
 		353B454D26E3D05A008607A5 /* SuperheroResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroResponse.swift; sourceTree = "<group>"; };
 		353B454F26E3D10D008607A5 /* ThumbnailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailResponse.swift; sourceTree = "<group>"; };
-		353B455126E3D1B5008607A5 /* ComicsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsResponse.swift; sourceTree = "<group>"; };
-		353B455326E3D242008607A5 /* ItemsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsResponse.swift; sourceTree = "<group>"; };
 		353B455626E3D45B008607A5 /* Superhero+ParseFromResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Superhero+ParseFromResponse.swift"; sourceTree = "<group>"; };
 		353B455B26E3DC24008607A5 /* SuperheroParseFromResponseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroParseFromResponseTest.swift; sourceTree = "<group>"; };
 		353B455E26E3DCFB008607A5 /* superhero.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = superhero.json; sourceTree = "<group>"; };
@@ -148,6 +153,17 @@
 		35B78A0B26E544FF00784D46 /* SuperheroEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroEndpoint.swift; sourceTree = "<group>"; };
 		35B78A0F26E5482300784D46 /* AllHeroesEndpointTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllHeroesEndpointTest.swift; sourceTree = "<group>"; };
 		35B78A1126E548F900784D46 /* SuperheroEndpointTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroEndpointTest.swift; sourceTree = "<group>"; };
+		35B78A1326E54D6800784D46 /* SuperHeroDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroDetailsViewController.swift; sourceTree = "<group>"; };
+		35B78A1A26E55FD500784D46 /* SuperHeroViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroViewControllerTest.swift; sourceTree = "<group>"; };
+		35B78A1C26E561E400784D46 /* SuperHeroDetailsViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroDetailsViewControllerTest.swift; sourceTree = "<group>"; };
+		35B78A2026E5651500784D46 /* SuperHeroViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroViewControllerMock.swift; sourceTree = "<group>"; };
+		35B78A2426E565B800784D46 /* HeroesServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesServiceMock.swift; sourceTree = "<group>"; };
+		35B78A2626E566A000784D46 /* SuperHeroPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroPresenterTest.swift; sourceTree = "<group>"; };
+		35B78A2826E5679E00784D46 /* HeroesServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesServiceTest.swift; sourceTree = "<group>"; };
+		35B78A2C26E567D100784D46 /* URLSessionNetworkProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionNetworkProviderMock.swift; sourceTree = "<group>"; };
+		35B78A3026E568F200784D46 /* CacheManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManagerMock.swift; sourceTree = "<group>"; };
+		35B78A3426E5692B00784D46 /* ReachabilityMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityMock.swift; sourceTree = "<group>"; };
+		35B78A3626E56A9700784D46 /* LocalCacheManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheManagerTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,12 +236,13 @@
 		353B44CC26E37F2F008607A5 /* SuperheroSquadMakerTests */ = {
 			isa = PBXGroup;
 			children = (
+				35B78A1E26E564F100784D46 /* SuperHeroDetails */,
+				35B78A1926E55FBF00784D46 /* SuperHero */,
 				353B456026E3DD56008607A5 /* Helpers */,
 				353B455D26E3DC88008607A5 /* JSONMocks */,
 				353B455A26E3DC13008607A5 /* Extensions */,
 				353B453326E3BC65008607A5 /* Configurations */,
 				353B452B26E3A286008607A5 /* Network */,
-				353B44CD26E37F2F008607A5 /* SuperheroSquadMakerTests.swift */,
 				353B44FC26E3885A008607A5 /* TestingAppDelegate.swift */,
 				353B44FE26E38871008607A5 /* TestingSceneDelegate.swift */,
 				353B450026E3888D008607A5 /* TestingRootViewController.swift */,
@@ -324,6 +341,9 @@
 		353B452B26E3A286008607A5 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				35B78A2E26E568C400784D46 /* Cache */,
+				35B78A2A26E567C100784D46 /* Provider */,
+				35B78A2226E565A400784D46 /* Service */,
 				35B78A0E26E5480A00784D46 /* Endpoint */,
 				353B456726E43156008607A5 /* Response */,
 				353B452C26E3A28B008607A5 /* Support */,
@@ -334,6 +354,7 @@
 		353B452C26E3A28B008607A5 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				35B78A3326E5691D00784D46 /* Mock */,
 				353B454126E3CA1B008607A5 /* UrlBuilderTest.swift */,
 			);
 			path = Support;
@@ -381,8 +402,6 @@
 				353B454B26E3CEA9008607A5 /* MarvelData.swift */,
 				353B454D26E3D05A008607A5 /* SuperheroResponse.swift */,
 				353B454F26E3D10D008607A5 /* ThumbnailResponse.swift */,
-				353B455126E3D1B5008607A5 /* ComicsResponse.swift */,
-				353B455326E3D242008607A5 /* ItemsResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -457,6 +476,7 @@
 		35B78A0D26E5479700784D46 /* SuperHeroDetails */ = {
 			isa = PBXGroup;
 			children = (
+				35B78A1326E54D6800784D46 /* SuperHeroDetailsViewController.swift */,
 			);
 			path = SuperHeroDetails;
 			sourceTree = "<group>";
@@ -468,6 +488,90 @@
 				35B78A1126E548F900784D46 /* SuperheroEndpointTest.swift */,
 			);
 			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		35B78A1926E55FBF00784D46 /* SuperHero */ = {
+			isa = PBXGroup;
+			children = (
+				35B78A1F26E564FF00784D46 /* Mock */,
+				35B78A1A26E55FD500784D46 /* SuperHeroViewControllerTest.swift */,
+				35B78A2626E566A000784D46 /* SuperHeroPresenterTest.swift */,
+			);
+			path = SuperHero;
+			sourceTree = "<group>";
+		};
+		35B78A1E26E564F100784D46 /* SuperHeroDetails */ = {
+			isa = PBXGroup;
+			children = (
+				35B78A1C26E561E400784D46 /* SuperHeroDetailsViewControllerTest.swift */,
+			);
+			path = SuperHeroDetails;
+			sourceTree = "<group>";
+		};
+		35B78A1F26E564FF00784D46 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				35B78A2026E5651500784D46 /* SuperHeroViewControllerMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		35B78A2226E565A400784D46 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				35B78A2326E565AE00784D46 /* Mock */,
+				35B78A2826E5679E00784D46 /* HeroesServiceTest.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		35B78A2326E565AE00784D46 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				35B78A2426E565B800784D46 /* HeroesServiceMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		35B78A2A26E567C100784D46 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				35B78A2B26E567C500784D46 /* Mock */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		35B78A2B26E567C500784D46 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				35B78A2C26E567D100784D46 /* URLSessionNetworkProviderMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		35B78A2E26E568C400784D46 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				35B78A2F26E568EB00784D46 /* Mock */,
+				35B78A3626E56A9700784D46 /* LocalCacheManagerTest.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		35B78A2F26E568EB00784D46 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				35B78A3026E568F200784D46 /* CacheManagerMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		35B78A3326E5691D00784D46 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				35B78A3426E5692B00784D46 /* ReachabilityMock.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -643,9 +747,9 @@
 				353B453126E3BA74008607A5 /* AppConfiguration.swift in Sources */,
 				353B450926E38A9B008607A5 /* Endpoint.swift in Sources */,
 				353B451826E38EE0008607A5 /* Service.swift in Sources */,
+				35B78A1426E54D6800784D46 /* SuperHeroDetailsViewController.swift in Sources */,
 				353B455026E3D10D008607A5 /* ThumbnailResponse.swift in Sources */,
 				358DD00926E455B800092C32 /* UIImageView+CircleMask.swift in Sources */,
-				353B455426E3D242008607A5 /* ItemsResponse.swift in Sources */,
 				353B44F526E381D5008607A5 /* StorageManager.swift in Sources */,
 				353B44EB26E37FF6008607A5 /* Reachability.swift in Sources */,
 				353B450626E38A84008607A5 /* NetworkProvider.swift in Sources */,
@@ -655,7 +759,6 @@
 				353B457826E43CE4008607A5 /* SuperHeroTableViewCell.swift in Sources */,
 				353B457626E43942008607A5 /* SuperHeroView.swift in Sources */,
 				353B44B926E37F2D008607A5 /* SceneDelegate.swift in Sources */,
-				353B455226E3D1B5008607A5 /* ComicsResponse.swift in Sources */,
 				353B454A26E3CE3F008607A5 /* MarvelResponse.swift in Sources */,
 				353B452426E39452008607A5 /* LocalCacheManager.swift in Sources */,
 				353B451026E38BA9008607A5 /* ApiError.swift in Sources */,
@@ -671,16 +774,25 @@
 			files = (
 				353B44FF26E38871008607A5 /* TestingSceneDelegate.swift in Sources */,
 				353B454226E3CA1B008607A5 /* UrlBuilderTest.swift in Sources */,
+				35B78A2726E566A000784D46 /* SuperHeroPresenterTest.swift in Sources */,
+				35B78A2526E565B800784D46 /* HeroesServiceMock.swift in Sources */,
 				353B456D26E433A0008607A5 /* MarvelDataTest.swift in Sources */,
 				353B453E26E3C413008607A5 /* AppConfigurationTest.swift in Sources */,
 				35B78A1226E548F900784D46 /* SuperheroEndpointTest.swift in Sources */,
 				353B44FD26E3885A008607A5 /* TestingAppDelegate.swift in Sources */,
-				353B44CE26E37F2F008607A5 /* SuperheroSquadMakerTests.swift in Sources */,
+				35B78A2126E5651500784D46 /* SuperHeroViewControllerMock.swift in Sources */,
+				35B78A1B26E55FD500784D46 /* SuperHeroViewControllerTest.swift in Sources */,
+				35B78A2926E5679E00784D46 /* HeroesServiceTest.swift in Sources */,
+				35B78A1D26E561E400784D46 /* SuperHeroDetailsViewControllerTest.swift in Sources */,
 				35B78A1026E5482300784D46 /* AllHeroesEndpointTest.swift in Sources */,
 				353B456226E3DD67008607A5 /* JSONHelper.swift in Sources */,
 				353B450126E3888D008607A5 /* TestingRootViewController.swift in Sources */,
+				35B78A2D26E567D100784D46 /* URLSessionNetworkProviderMock.swift in Sources */,
 				353B455C26E3DC24008607A5 /* SuperheroParseFromResponseTest.swift in Sources */,
+				35B78A3526E5692B00784D46 /* ReachabilityMock.swift in Sources */,
+				35B78A3726E56A9700784D46 /* LocalCacheManagerTest.swift in Sources */,
 				353B456926E4316E008607A5 /* SuperheroResponseTest.swift in Sources */,
+				35B78A3126E568F200784D46 /* CacheManagerMock.swift in Sources */,
 				353B456B26E43277008607A5 /* MarvelResponseTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

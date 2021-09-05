@@ -25,6 +25,6 @@ class SuperHeroTableViewCell: UITableViewCell {
 
     func initView(hero: Superhero) {
         self.heroName.text = hero.name
-        self.heroImage.loadThumbnail(from: hero.thumbnailURL)
+        self.heroImage.loadThumbnail(from: hero.thumbnailURL, rounded: true)
     }
 }

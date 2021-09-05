@@ -10,11 +10,12 @@ import UIKit
 class SuperHeroViewController: UITableViewController, SuperHeroView {
 
     private var isLoading = false
-    private var heroesDataSource = [Superhero]()
-    private var presenter: SuperHeroPresenter?
+    internal var heroesDataSource = [Superhero]()
+    internal var presenter: SuperHeroPresenter?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Marvel"
         self.presenter = SuperHeroPresenter(delegate: self)
         self.presenter?.getAllHeroes()
     }
@@ -22,8 +23,13 @@ class SuperHeroViewController: UITableViewController, SuperHeroView {
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "showHeroDetails" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let detailsVC = segue.destination as? SuperHeroDetailsViewController
+                let hero = heroesDataSource[indexPath.row]
+                detailsVC?.superhero = hero
+            }
+        }
     }
 
     // MARK: - Delegate Methods
@@ -57,5 +63,9 @@ class SuperHeroViewController: UITableViewController, SuperHeroView {
         let cell = tableView.dequeueReusableCell(withIdentifier: "heroCell", for: indexPath) as? SuperHeroTableViewCell
         cell?.initView(hero: heroesDataSource[indexPath.row])
         return cell!
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showHeroDetails", sender: nil)
     }
 }

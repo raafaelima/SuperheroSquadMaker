@@ -14,16 +14,33 @@ extension SuperheroResponse {
             name: self.name,
             description: self.description,
             modified: self.modified,
-            thumbnailURL: thumbnailURL()
+            thumbnailURL: thumbnailURL(),
+            profileImageURL: profileURL()
         )
     }
 
     private func thumbnailURL() -> String {
+        return buildImageURL(isThumbnail: true)
+    }
+
+    private func profileURL() -> String {
+        return buildImageURL(isThumbnail: false)
+    }
+
+    private func buildImageURL(isThumbnail: Bool) -> String {
+
+        let thumbnail = "/portrait_incredible."
+        let standard = "/standard_fantastic."
+
         guard let path = self.thumbnail?.path, let ext = self.thumbnail?.ext else {
             return ""
         }
-
         let securePath = path.replacingOccurrences(of: "http", with: "https", options: .literal, range: nil)
-        return securePath + "/portrait_incredible." + ext
+
+        if isThumbnail {
+            return securePath + thumbnail + ext
+        } else {
+            return securePath + standard + ext
+        }
     }
 }

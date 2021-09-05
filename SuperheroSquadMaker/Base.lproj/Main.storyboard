@@ -3,13 +3,14 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Marvel-->
         <scene sceneID="rEG-U9-p5V">
             <objects>
-                <tableViewController storyboardIdentifier="superheroVC" id="im9-qn-z1I" customClass="SuperHeroViewController" customModule="SuperheroSquadMaker" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="superheroesVC" id="im9-qn-z1I" customClass="SuperHeroViewController" customModule="SuperheroSquadMaker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="92" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="S7I-7Q-3Wa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,10 +73,81 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Marvel" id="vU4-Eq-THc"/>
+                    <connections>
+                        <segue destination="5kn-eY-lcy" kind="show" identifier="showHeroDetails" id="v5G-bD-HJR"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ifa-OM-Rcb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1513.0434782608697" y="16.071428571428569"/>
+        </scene>
+        <!--Super Hero Details View Controller-->
+        <scene sceneID="uxd-aX-XFw">
+            <objects>
+                <viewController storyboardIdentifier="superheroDetailsVC" id="5kn-eY-lcy" customClass="SuperHeroDetailsViewController" customModule="SuperheroSquadMaker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Afo-8x-cBa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heroThumbnail" translatesAutoresizingMaskIntoConstraints="NO" id="Yea-Ta-9Vy">
+                                <rect key="frame" x="0.0" y="88" width="414" height="358.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Super Hero Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyp-fV-xAs">
+                                <rect key="frame" x="16" y="470.5" width="382" height="41"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGo-2I-vDm">
+                                <rect key="frame" x="16" y="527.5" width="382" height="43"/>
+                                <color key="backgroundColor" red="0.95294117647058818" green="0.047058823529411764" blue="0.043137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="kqY-9V-Sc6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <state key="normal" title="💪 Recruit to Squad">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YaU-Ap-DTS">
+                                <rect key="frame" x="16" y="586.5" width="382" height="275.5"/>
+                                <color key="backgroundColor" red="0.1333333333" green="0.1450980392" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iz7-T8-wKZ"/>
+                        <color key="backgroundColor" red="0.1333333333" green="0.1450980392" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="YaU-Ap-DTS" firstAttribute="top" secondItem="gGo-2I-vDm" secondAttribute="bottom" constant="16" id="1QZ-Lu-hqg"/>
+                            <constraint firstItem="YaU-Ap-DTS" firstAttribute="leading" secondItem="iz7-T8-wKZ" secondAttribute="leading" constant="16" id="1RF-br-Jua"/>
+                            <constraint firstItem="Yea-Ta-9Vy" firstAttribute="leading" secondItem="iz7-T8-wKZ" secondAttribute="leading" id="5mz-UY-3pJ"/>
+                            <constraint firstItem="iz7-T8-wKZ" firstAttribute="trailing" secondItem="gGo-2I-vDm" secondAttribute="trailing" constant="16" id="Baj-v5-wco"/>
+                            <constraint firstItem="gGo-2I-vDm" firstAttribute="leading" secondItem="iz7-T8-wKZ" secondAttribute="leading" constant="16" id="Q0s-Uo-sDX"/>
+                            <constraint firstItem="gGo-2I-vDm" firstAttribute="top" secondItem="xyp-fV-xAs" secondAttribute="bottom" constant="16" id="QIt-Hg-VBM"/>
+                            <constraint firstItem="iz7-T8-wKZ" firstAttribute="trailing" secondItem="xyp-fV-xAs" secondAttribute="trailing" constant="16" id="T0D-FU-Si4"/>
+                            <constraint firstItem="iz7-T8-wKZ" firstAttribute="trailing" secondItem="Yea-Ta-9Vy" secondAttribute="trailing" id="TSW-1k-e5K"/>
+                            <constraint firstItem="xyp-fV-xAs" firstAttribute="leading" secondItem="iz7-T8-wKZ" secondAttribute="leading" constant="16" id="Ysz-wo-phM"/>
+                            <constraint firstItem="iz7-T8-wKZ" firstAttribute="trailing" secondItem="YaU-Ap-DTS" secondAttribute="trailing" constant="16" id="dpY-g9-Bqb"/>
+                            <constraint firstItem="Yea-Ta-9Vy" firstAttribute="top" secondItem="iz7-T8-wKZ" secondAttribute="top" id="gJs-56-Lpe"/>
+                            <constraint firstItem="iz7-T8-wKZ" firstAttribute="bottom" secondItem="YaU-Ap-DTS" secondAttribute="bottom" id="i8b-4t-KHe"/>
+                            <constraint firstItem="Yea-Ta-9Vy" firstAttribute="height" secondItem="Afo-8x-cBa" secondAttribute="height" multiplier="0.4" id="vNL-lA-SCl"/>
+                            <constraint firstItem="xyp-fV-xAs" firstAttribute="top" secondItem="Yea-Ta-9Vy" secondAttribute="bottom" constant="24" id="yrv-xI-Qc4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="u6F-C7-Z1w"/>
+                    <connections>
+                        <outlet property="heroDescription" destination="YaU-Ap-DTS" id="4Ry-ta-UPR"/>
+                        <outlet property="heroImage" destination="Yea-Ta-9Vy" id="slO-gf-FWj"/>
+                        <outlet property="heroName" destination="xyp-fV-xAs" id="xiM-TB-YU8"/>
+                        <outlet property="recruitToSquadButton" destination="gGo-2I-vDm" id="WUW-uh-75O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zGb-Ew-1Cd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2325" y="16"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BCq-C8-LWu">
@@ -85,8 +157,12 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cxS-SY-Llr">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.21176470588235294" green="0.23137254901960785" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>
                     </navigationBar>

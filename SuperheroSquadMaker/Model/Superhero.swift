@@ -13,4 +13,5 @@ struct Superhero {
     let description: String
     let modified: String
     let thumbnailURL: String
+    let profileImageURL: String
 }
