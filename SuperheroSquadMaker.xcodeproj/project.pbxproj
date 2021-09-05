@@ -73,6 +73,7 @@
 		35B78A3526E5692B00784D46 /* ReachabilityMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B78A3426E5692B00784D46 /* ReachabilityMock.swift */; };
 		35B78A3726E56A9700784D46 /* LocalCacheManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B78A3626E56A9700784D46 /* LocalCacheManagerTest.swift */; };
 		35B78A3926E5716C00784D46 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B78A3826E5716C00784D46 /* UIColor+Hex.swift */; };
+		35B78A3C26E579F400784D46 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B78A3B26E579F400784D46 /* AlertManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,6 +167,7 @@
 		35B78A3426E5692B00784D46 /* ReachabilityMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityMock.swift; sourceTree = "<group>"; };
 		35B78A3626E56A9700784D46 /* LocalCacheManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheManagerTest.swift; sourceTree = "<group>"; };
 		35B78A3826E5716C00784D46 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		35B78A3B26E579F400784D46 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -367,6 +369,7 @@
 			children = (
 				353B453B26E3C0BF008607A5 /* Local.plist */,
 				353B44C426E37F2E008607A5 /* Info.plist */,
+				35B78A3B26E579F400784D46 /* AlertManager.swift */,
 				353B453026E3BA74008607A5 /* AppConfiguration.swift */,
 			);
 			path = Configurations;
@@ -747,6 +750,7 @@
 				353B452226E3941B008607A5 /* FileStorageManager.swift in Sources */,
 				353B44E926E37FD9008607A5 /* NSURLSessionPinningDelegate.swift in Sources */,
 				353B452626E394EF008607A5 /* URLSessionNetworkProvider.swift in Sources */,
+				35B78A3C26E579F400784D46 /* AlertManager.swift in Sources */,
 				353B453126E3BA74008607A5 /* AppConfiguration.swift in Sources */,
 				353B450926E38A9B008607A5 /* Endpoint.swift in Sources */,
 				353B451826E38EE0008607A5 /* Service.swift in Sources */,

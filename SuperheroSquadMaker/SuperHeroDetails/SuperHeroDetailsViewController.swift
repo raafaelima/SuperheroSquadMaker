@@ -70,12 +70,25 @@ class SuperHeroDetailsViewController: UIViewController {
     // MARK: - Recruit Action
 
     @IBAction func recruitOrFireSuperheroAction(_ sender: Any) {
-        if superhero.isHiredToSquad {
-            superhero.isHiredToSquad = false
-        } else {
+        if !superhero.isHiredToSquad {
             superhero.isHiredToSquad = true
+            applyRecruitState()
+        } else {
+            showFireHeroFromSquadAlert()
+        }
+    }
+
+    private func showFireHeroFromSquadAlert() {
+        let confirmFire = UIAlertAction(title: "Confirm", style: .default) { _ in
+            self.superhero.isHiredToSquad = false
+            self.applyRecruitState()
         }
 
-        applyRecruitState()
+        let alert = AlertManager.shared.buildAlert(
+            with: "Are you sure?",
+            message: "Do you really want to fire \(superhero.name) from your squad?",
+            action: confirmFire
+        )
+        self.present(alert, animated: true)
     }
 }
