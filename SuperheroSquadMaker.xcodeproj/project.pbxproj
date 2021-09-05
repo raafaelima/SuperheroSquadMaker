@@ -72,6 +72,7 @@
 		35B78A3126E568F200784D46 /* CacheManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B78A3026E568F200784D46 /* CacheManagerMock.swift */; };
 		35B78A3526E5692B00784D46 /* ReachabilityMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B78A3426E5692B00784D46 /* ReachabilityMock.swift */; };
 		35B78A3726E56A9700784D46 /* LocalCacheManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B78A3626E56A9700784D46 /* LocalCacheManagerTest.swift */; };
+		35B78A3926E5716C00784D46 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B78A3826E5716C00784D46 /* UIColor+Hex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,6 +165,7 @@
 		35B78A3026E568F200784D46 /* CacheManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManagerMock.swift; sourceTree = "<group>"; };
 		35B78A3426E5692B00784D46 /* ReachabilityMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityMock.swift; sourceTree = "<group>"; };
 		35B78A3626E56A9700784D46 /* LocalCacheManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheManagerTest.swift; sourceTree = "<group>"; };
+		35B78A3826E5716C00784D46 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -413,6 +415,7 @@
 				353B455626E3D45B008607A5 /* Superhero+ParseFromResponse.swift */,
 				358DD00626E449BE00092C32 /* UIImageView+LoadThumbnail.swift */,
 				358DD00826E455B800092C32 /* UIImageView+CircleMask.swift */,
+				35B78A3826E5716C00784D46 /* UIColor+Hex.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -753,6 +756,7 @@
 				353B44F526E381D5008607A5 /* StorageManager.swift in Sources */,
 				353B44EB26E37FF6008607A5 /* Reachability.swift in Sources */,
 				353B450626E38A84008607A5 /* NetworkProvider.swift in Sources */,
+				35B78A3926E5716C00784D46 /* UIColor+Hex.swift in Sources */,
 				353B455726E3D45B008607A5 /* Superhero+ParseFromResponse.swift in Sources */,
 				353B450326E388C5008607A5 /* main.swift in Sources */,
 				353B454026E3C9E0008607A5 /* HeroesService.swift in Sources */,

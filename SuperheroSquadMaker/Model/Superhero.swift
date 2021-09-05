@@ -14,4 +14,5 @@ struct Superhero {
     let modified: String
     let thumbnailURL: String
     let profileImageURL: String
+    var isHiredToSquad: Bool = false
 }
