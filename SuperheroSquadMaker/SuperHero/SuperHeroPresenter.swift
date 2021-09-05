@@ -21,16 +21,22 @@ struct SuperHeroPresenter {
         heroService.getAllSuperheroes { superheroes in
 
             guard let heroes = superheroes else {
-                delegate?.showErrorAtLoadingHeroes()
+                OperationQueue.main.addOperation({
+                    delegate?.showErrorAtLoadingHeroes()
+                })
                 return
             }
 
             if heroes.isEmpty {
-                delegate?.showEmptyDatasetMessage()
+                OperationQueue.main.addOperation({
+                    delegate?.showEmptyDatasetMessage()
+                })
                 return
             }
 
-            delegate?.loadHeroes(heroes: heroes)
+            OperationQueue.main.addOperation({
+                delegate?.loadHeroes(heroes: heroes)
+            })
         }
     }
 }
