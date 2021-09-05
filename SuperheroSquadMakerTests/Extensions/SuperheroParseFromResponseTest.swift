@@ -19,7 +19,7 @@ class SuperheroParseFromResponseTest: XCTestCase {
     }
 
     func testThumbnailURLCreationIsCorrect() throws {
-        XCTAssertEqual(sut.parse().thumbnailURL, "http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16/portrait_incredible.jpg")
+        XCTAssertEqual(sut.parse().thumbnailURL, "https://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16/portrait_incredible.jpg")
     }
 
     func testThumbnailShouldReturnEmptyURLWhenNotPresentOnResponse() throws {
