@@ -61,6 +61,9 @@
 		358DD00526E4498D00092C32 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 358DD00426E4498D00092C32 /* Kingfisher.framework */; };
 		358DD00726E449BE00092C32 /* UIImageView+LoadThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358DD00626E449BE00092C32 /* UIImageView+LoadThumbnail.swift */; };
 		358DD00926E455B800092C32 /* UIImageView+CircleMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358DD00826E455B800092C32 /* UIImageView+CircleMask.swift */; };
+		35B78A0C26E544FF00784D46 /* SuperheroEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B78A0B26E544FF00784D46 /* SuperheroEndpoint.swift */; };
+		35B78A1026E5482300784D46 /* AllHeroesEndpointTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B78A0F26E5482300784D46 /* AllHeroesEndpointTest.swift */; };
+		35B78A1226E548F900784D46 /* SuperheroEndpointTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B78A1126E548F900784D46 /* SuperheroEndpointTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +145,9 @@
 		358DD00426E4498D00092C32 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		358DD00626E449BE00092C32 /* UIImageView+LoadThumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+LoadThumbnail.swift"; sourceTree = "<group>"; };
 		358DD00826E455B800092C32 /* UIImageView+CircleMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+CircleMask.swift"; sourceTree = "<group>"; };
+		35B78A0B26E544FF00784D46 /* SuperheroEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroEndpoint.swift; sourceTree = "<group>"; };
+		35B78A0F26E5482300784D46 /* AllHeroesEndpointTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllHeroesEndpointTest.swift; sourceTree = "<group>"; };
+		35B78A1126E548F900784D46 /* SuperheroEndpointTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroEndpointTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +200,7 @@
 		353B44B526E37F2D008607A5 /* SuperheroSquadMaker */ = {
 			isa = PBXGroup;
 			children = (
+				35B78A0D26E5479700784D46 /* SuperHeroDetails */,
 				353B457026E437FA008607A5 /* SuperHero */,
 				353B455526E3D3E5008607A5 /* Extensions */,
 				353B454526E3CB5B008607A5 /* Model */,
@@ -291,6 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				353B454326E3CA28008607A5 /* AllHeroesEndpoint.swift */,
+				35B78A0B26E544FF00784D46 /* SuperheroEndpoint.swift */,
 				353B450826E38A9B008607A5 /* Endpoint.swift */,
 			);
 			path = Endpoint;
@@ -316,6 +324,7 @@
 		353B452B26E3A286008607A5 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				35B78A0E26E5480A00784D46 /* Endpoint */,
 				353B456726E43156008607A5 /* Response */,
 				353B452C26E3A28B008607A5 /* Support */,
 			);
@@ -443,6 +452,22 @@
 				358DD00426E4498D00092C32 /* Kingfisher.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		35B78A0D26E5479700784D46 /* SuperHeroDetails */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SuperHeroDetails;
+			sourceTree = "<group>";
+		};
+		35B78A0E26E5480A00784D46 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				35B78A0F26E5482300784D46 /* AllHeroesEndpointTest.swift */,
+				35B78A1126E548F900784D46 /* SuperheroEndpointTest.swift */,
+			);
+			path = Endpoint;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -635,6 +660,7 @@
 				353B452426E39452008607A5 /* LocalCacheManager.swift in Sources */,
 				353B451026E38BA9008607A5 /* ApiError.swift in Sources */,
 				353B44ED26E3808C008607A5 /* URLBuilder.swift in Sources */,
+				35B78A0C26E544FF00784D46 /* SuperheroEndpoint.swift in Sources */,
 				353B44F026E38198008607A5 /* CacheManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -647,8 +673,10 @@
 				353B454226E3CA1B008607A5 /* UrlBuilderTest.swift in Sources */,
 				353B456D26E433A0008607A5 /* MarvelDataTest.swift in Sources */,
 				353B453E26E3C413008607A5 /* AppConfigurationTest.swift in Sources */,
+				35B78A1226E548F900784D46 /* SuperheroEndpointTest.swift in Sources */,
 				353B44FD26E3885A008607A5 /* TestingAppDelegate.swift in Sources */,
 				353B44CE26E37F2F008607A5 /* SuperheroSquadMakerTests.swift in Sources */,
+				35B78A1026E5482300784D46 /* AllHeroesEndpointTest.swift in Sources */,
 				353B456226E3DD67008607A5 /* JSONHelper.swift in Sources */,
 				353B450126E3888D008607A5 /* TestingRootViewController.swift in Sources */,
 				353B455C26E3DC24008607A5 /* SuperheroParseFromResponseTest.swift in Sources */,

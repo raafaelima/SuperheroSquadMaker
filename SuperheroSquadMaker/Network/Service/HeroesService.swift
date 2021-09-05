@@ -30,4 +30,25 @@ class HeroesService: Service {
             }
         }
     }
+
+    func getSuperheroDetails(id: Int, completion: @escaping (Superhero?) -> Void) {
+        let endpoint = SuperheroEndpoint(heroId: id)
+        networkProvider.requestData(from: endpoint) { (result: Result<MarvelResponse<SuperheroResponse>, ApiError>) in
+            switch result {
+            case .success(let characters):
+
+                guard let results = characters.data?.results, !results.isEmpty else {
+                    completion(nil)
+                    return
+                }
+
+                let superhero = results.first?.parse()
+                completion(superhero)
+
+            case .failure(let error):
+                print("Error at Loading Hero (\(id): \(error)")
+                completion(nil)
+            }
+        }
+    }
 }

@@ -2,7 +2,7 @@
 //  SuperHeroViewController.swift
 //  SuperheroSquadMaker
 //
-//  Created by CTW00710-Admin on 05/09/2021.
+//  Created by Rafael Lima on 05/09/2021.
 //
 
 import UIKit
