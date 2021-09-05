@@ -29,17 +29,19 @@ struct URLSessionNetworkProvider: NetworkProvider {
             }
 
             // TODO: Define location of cache being saved
-            self.cacheManager.save(onCache: receivedData, at: "")
+            // self.cacheManager.save(onCache: receivedData, at: "")
             self.process(data: receivedData, completion)
         }
 
-        if self.reachability.currentStatus() == .notReachable {
-            // TODO: Define location of cache being loaded
-            let cachedData = cacheManager.load(from: "")
-            process(data: cachedData, completion)
-        } else {
-            remoteDataTask.resume()
-        }
+        remoteDataTask.resume()
+
+        /*
+         if self.reachability.currentStatus() == .notReachable {
+         // TODO: Define location of cache being loaded
+         let cachedData = cacheManager.load(from: "")
+         process(data: cachedData, completion)
+         }
+         */
     }
 
     private func process<T: Codable>(data: Data, _ completion: @escaping (Result<T, ApiError>) -> Void) {
