@@ -17,7 +17,7 @@ class HeroesService: Service {
         self.networkProvider = networkProvider
     }
 
-    func getAllSuperheroes(completion: @escaping ([Superhero]) -> Void) {
+    func getAllSuperheroes(completion: @escaping ([Superhero]?) -> Void) {
         let endpoint = AllHeroesEndpoint()
         networkProvider.requestData(from: endpoint) { (result: Result<MarvelResponse<SuperheroResponse>, ApiError>) in
             switch result {
@@ -25,7 +25,8 @@ class HeroesService: Service {
                 let superheroes = characters.data?.results?.compactMap({ $0.parse() }) ?? []
                 completion(superheroes)
             case .failure(let error):
-                print(error)
+                print("Error at Loading Heroes: \(error)")
+                completion(nil)
             }
         }
     }

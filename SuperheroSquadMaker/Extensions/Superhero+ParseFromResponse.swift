@@ -23,6 +23,7 @@ extension SuperheroResponse {
             return ""
         }
 
-        return path + "/portrait_incredible." + ext
+        let securePath = path.replacingOccurrences(of: "http", with: "https", options: .literal, range: nil)
+        return securePath + "/portrait_incredible." + ext
     }
 }

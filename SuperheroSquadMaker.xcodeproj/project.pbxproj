@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		353B44B726E37F2D008607A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B44B626E37F2D008607A5 /* AppDelegate.swift */; };
 		353B44B926E37F2D008607A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B44B826E37F2D008607A5 /* SceneDelegate.swift */; };
-		353B44BB26E37F2D008607A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B44BA26E37F2D008607A5 /* ViewController.swift */; };
 		353B44BE26E37F2D008607A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 353B44BC26E37F2D008607A5 /* Main.storyboard */; };
 		353B44C026E37F2E008607A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 353B44BF26E37F2E008607A5 /* Assets.xcassets */; };
 		353B44C326E37F2E008607A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 353B44C126E37F2E008607A5 /* LaunchScreen.storyboard */; };
@@ -55,6 +54,13 @@
 		353B456B26E43277008607A5 /* MarvelResponseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B456A26E43277008607A5 /* MarvelResponseTest.swift */; };
 		353B456D26E433A0008607A5 /* MarvelDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B456C26E433A0008607A5 /* MarvelDataTest.swift */; };
 		353B456F26E433F9008607A5 /* marvelData.json in Resources */ = {isa = PBXBuildFile; fileRef = 353B456E26E433F9008607A5 /* marvelData.json */; };
+		353B457226E43875008607A5 /* SuperHeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B457126E43875008607A5 /* SuperHeroViewController.swift */; };
+		353B457426E43889008607A5 /* SuperHeroPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B457326E43889008607A5 /* SuperHeroPresenter.swift */; };
+		353B457626E43942008607A5 /* SuperHeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B457526E43942008607A5 /* SuperHeroView.swift */; };
+		353B457826E43CE4008607A5 /* SuperHeroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B457726E43CE4008607A5 /* SuperHeroTableViewCell.swift */; };
+		358DD00526E4498D00092C32 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 358DD00426E4498D00092C32 /* Kingfisher.framework */; };
+		358DD00726E449BE00092C32 /* UIImageView+LoadThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358DD00626E449BE00092C32 /* UIImageView+LoadThumbnail.swift */; };
+		358DD00926E455B800092C32 /* UIImageView+CircleMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358DD00826E455B800092C32 /* UIImageView+CircleMask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,7 +84,6 @@
 		353B44B326E37F2D008607A5 /* SuperheroSquadMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperheroSquadMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		353B44B626E37F2D008607A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		353B44B826E37F2D008607A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		353B44BA26E37F2D008607A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		353B44BD26E37F2D008607A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		353B44BF26E37F2E008607A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		353B44C226E37F2E008607A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -130,6 +135,13 @@
 		353B456A26E43277008607A5 /* MarvelResponseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelResponseTest.swift; sourceTree = "<group>"; };
 		353B456C26E433A0008607A5 /* MarvelDataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelDataTest.swift; sourceTree = "<group>"; };
 		353B456E26E433F9008607A5 /* marvelData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = marvelData.json; sourceTree = "<group>"; };
+		353B457126E43875008607A5 /* SuperHeroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroViewController.swift; sourceTree = "<group>"; };
+		353B457326E43889008607A5 /* SuperHeroPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroPresenter.swift; sourceTree = "<group>"; };
+		353B457526E43942008607A5 /* SuperHeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroView.swift; sourceTree = "<group>"; };
+		353B457726E43CE4008607A5 /* SuperHeroTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroTableViewCell.swift; sourceTree = "<group>"; };
+		358DD00426E4498D00092C32 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		358DD00626E449BE00092C32 /* UIImageView+LoadThumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+LoadThumbnail.swift"; sourceTree = "<group>"; };
+		358DD00826E455B800092C32 /* UIImageView+CircleMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+CircleMask.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				358DD00526E4498D00092C32 /* Kingfisher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +177,7 @@
 				353B44CC26E37F2F008607A5 /* SuperheroSquadMakerTests */,
 				353B44D726E37F2F008607A5 /* SuperheroSquadMakerUITests */,
 				353B44B426E37F2D008607A5 /* Products */,
+				358DD00326E4498D00092C32 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -180,6 +194,7 @@
 		353B44B526E37F2D008607A5 /* SuperheroSquadMaker */ = {
 			isa = PBXGroup;
 			children = (
+				353B457026E437FA008607A5 /* SuperHero */,
 				353B455526E3D3E5008607A5 /* Extensions */,
 				353B454526E3CB5B008607A5 /* Model */,
 				353B453226E3BBF4008607A5 /* Configurations */,
@@ -187,7 +202,6 @@
 				353B44E626E37F91008607A5 /* Network */,
 				353B44B626E37F2D008607A5 /* AppDelegate.swift */,
 				353B44B826E37F2D008607A5 /* SceneDelegate.swift */,
-				353B44BA26E37F2D008607A5 /* ViewController.swift */,
 				353B44BC26E37F2D008607A5 /* Main.storyboard */,
 				353B44BF26E37F2E008607A5 /* Assets.xcassets */,
 				353B44C126E37F2E008607A5 /* LaunchScreen.storyboard */,
@@ -369,6 +383,8 @@
 			children = (
 				353B450D26E38B1E008607A5 /* Endpoint+UrlRequest.swift */,
 				353B455626E3D45B008607A5 /* Superhero+ParseFromResponse.swift */,
+				358DD00626E449BE00092C32 /* UIImageView+LoadThumbnail.swift */,
+				358DD00826E455B800092C32 /* UIImageView+CircleMask.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -410,6 +426,25 @@
 			path = Response;
 			sourceTree = "<group>";
 		};
+		353B457026E437FA008607A5 /* SuperHero */ = {
+			isa = PBXGroup;
+			children = (
+				353B457126E43875008607A5 /* SuperHeroViewController.swift */,
+				353B457326E43889008607A5 /* SuperHeroPresenter.swift */,
+				353B457526E43942008607A5 /* SuperHeroView.swift */,
+				353B457726E43CE4008607A5 /* SuperHeroTableViewCell.swift */,
+			);
+			path = SuperHero;
+			sourceTree = "<group>";
+		};
+		358DD00326E4498D00092C32 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				358DD00426E4498D00092C32 /* Kingfisher.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -420,6 +455,7 @@
 				353B44AF26E37F2D008607A5 /* Sources */,
 				353B44B026E37F2D008607A5 /* Frameworks */,
 				353B44B126E37F2D008607A5 /* Resources */,
+				358DD00226E4495B00092C32 /* Copy Carthage Frameworks */,
 			);
 			buildRules = (
 			);
@@ -540,15 +576,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		358DD00226E4495B00092C32 /* Copy Carthage Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/build/iOS/Kingfisher.framework",
+			);
+			name = "Copy Carthage Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncarthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		353B44AF26E37F2D008607A5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				353B454C26E3CEA9008607A5 /* MarvelData.swift in Sources */,
+				353B457226E43875008607A5 /* SuperHeroViewController.swift in Sources */,
+				353B457426E43889008607A5 /* SuperHeroPresenter.swift in Sources */,
 				353B450E26E38B1E008607A5 /* Endpoint+UrlRequest.swift in Sources */,
-				353B44BB26E37F2D008607A5 /* ViewController.swift in Sources */,
 				353B454726E3CB70008607A5 /* Superhero.swift in Sources */,
+				358DD00726E449BE00092C32 /* UIImageView+LoadThumbnail.swift in Sources */,
 				353B454426E3CA28008607A5 /* AllHeroesEndpoint.swift in Sources */,
 				353B44B726E37F2D008607A5 /* AppDelegate.swift in Sources */,
 				353B454E26E3D05A008607A5 /* SuperheroResponse.swift in Sources */,
@@ -559,6 +619,7 @@
 				353B450926E38A9B008607A5 /* Endpoint.swift in Sources */,
 				353B451826E38EE0008607A5 /* Service.swift in Sources */,
 				353B455026E3D10D008607A5 /* ThumbnailResponse.swift in Sources */,
+				358DD00926E455B800092C32 /* UIImageView+CircleMask.swift in Sources */,
 				353B455426E3D242008607A5 /* ItemsResponse.swift in Sources */,
 				353B44F526E381D5008607A5 /* StorageManager.swift in Sources */,
 				353B44EB26E37FF6008607A5 /* Reachability.swift in Sources */,
@@ -566,6 +627,8 @@
 				353B455726E3D45B008607A5 /* Superhero+ParseFromResponse.swift in Sources */,
 				353B450326E388C5008607A5 /* main.swift in Sources */,
 				353B454026E3C9E0008607A5 /* HeroesService.swift in Sources */,
+				353B457826E43CE4008607A5 /* SuperHeroTableViewCell.swift in Sources */,
+				353B457626E43942008607A5 /* SuperHeroView.swift in Sources */,
 				353B44B926E37F2D008607A5 /* SceneDelegate.swift in Sources */,
 				353B455226E3D1B5008607A5 /* ComicsResponse.swift in Sources */,
 				353B454A26E3CE3F008607A5 /* MarvelResponse.swift in Sources */,
@@ -759,6 +822,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SuperheroSquadMaker/Configurations/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -777,6 +844,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SuperheroSquadMaker/Configurations/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -936,6 +1007,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SuperheroSquadMaker/Configurations/Local.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
