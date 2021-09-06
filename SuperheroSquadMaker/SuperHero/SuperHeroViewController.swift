@@ -10,11 +10,12 @@ import UIKit
 class SuperHeroViewController: UITableViewController, SuperHeroView {
 
     private var isLoading = false
-    internal var heroesDataSource = [Superhero]()
-    internal var presenter: SuperHeroPresenter?
-
     private let loadingView: UIView = UIView()
     private var activityIndicatorView: UIActivityIndicatorView!
+
+    internal var presenter: SuperHeroPresenter?
+    internal var heroesDataSource = [Superhero]()
+    internal var squadDataSource = [Superhero]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,6 +64,8 @@ class SuperHeroViewController: UITableViewController, SuperHeroView {
 
     func loadHeroes(heroes: [Superhero]) {
         self.heroesDataSource = heroes
+        // TODO: Remove after implement persistence mechanism
+        self.squadDataSource = heroes
         self.tableView.reloadData()
         self.removeLoadingView()
     }
@@ -103,7 +106,25 @@ class SuperHeroViewController: UITableViewController, SuperHeroView {
         return cell!
     }
 
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if isAnyHeroHired() {
+            let squadView = SquadView()
+            squadView.loadSquad(squad: squadDataSource)
+            return squadView
+        } else {
+            return nil
+        }
+    }
+
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return isAnyHeroHired() ? 180 : 0
+    }
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "showHeroDetails", sender: nil)
+    }
+
+    private func isAnyHeroHired() -> Bool {
+        return !squadDataSource.isEmpty
     }
 }

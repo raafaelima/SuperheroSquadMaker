@@ -74,6 +74,10 @@
 		35B78A3726E56A9700784D46 /* LocalCacheManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B78A3626E56A9700784D46 /* LocalCacheManagerTest.swift */; };
 		35B78A3926E5716C00784D46 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B78A3826E5716C00784D46 /* UIColor+Hex.swift */; };
 		35B78A3C26E579F400784D46 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B78A3B26E579F400784D46 /* AlertManager.swift */; };
+		35D0872126E6C425004B895C /* SquadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D0871F26E6C425004B895C /* SquadView.swift */; };
+		35D0872626E6C8D2004B895C /* SquadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35D0872526E6C8D2004B895C /* SquadView.xib */; };
+		35D0872B26E6CBB9004B895C /* SquadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D0872926E6CBB9004B895C /* SquadCell.swift */; };
+		35D0872C26E6CBB9004B895C /* SquadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35D0872A26E6CBB9004B895C /* SquadCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,6 +172,10 @@
 		35B78A3626E56A9700784D46 /* LocalCacheManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheManagerTest.swift; sourceTree = "<group>"; };
 		35B78A3826E5716C00784D46 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		35B78A3B26E579F400784D46 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		35D0871F26E6C425004B895C /* SquadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquadView.swift; sourceTree = "<group>"; };
+		35D0872526E6C8D2004B895C /* SquadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SquadView.xib; sourceTree = "<group>"; };
+		35D0872926E6CBB9004B895C /* SquadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquadCell.swift; sourceTree = "<group>"; };
+		35D0872A26E6CBB9004B895C /* SquadCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SquadCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,8 +228,9 @@
 		353B44B526E37F2D008607A5 /* SuperheroSquadMaker */ = {
 			isa = PBXGroup;
 			children = (
-				35B78A0D26E5479700784D46 /* SuperHeroDetails */,
 				353B457026E437FA008607A5 /* SuperHero */,
+				35B78A0D26E5479700784D46 /* SuperHeroDetails */,
+				35D0871E26E6C33C004B895C /* Squad */,
 				353B455526E3D3E5008607A5 /* Extensions */,
 				353B454526E3CB5B008607A5 /* Model */,
 				353B453226E3BBF4008607A5 /* Configurations */,
@@ -580,6 +589,17 @@
 			path = Mock;
 			sourceTree = "<group>";
 		};
+		35D0871E26E6C33C004B895C /* Squad */ = {
+			isa = PBXGroup;
+			children = (
+				35D0871F26E6C425004B895C /* SquadView.swift */,
+				35D0872526E6C8D2004B895C /* SquadView.xib */,
+				35D0872926E6CBB9004B895C /* SquadCell.swift */,
+				35D0872A26E6CBB9004B895C /* SquadCell.xib */,
+			);
+			path = Squad;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -684,10 +704,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35D0872C26E6CBB9004B895C /* SquadCell.xib in Resources */,
 				353B44C326E37F2E008607A5 /* LaunchScreen.storyboard in Resources */,
 				353B44C026E37F2E008607A5 /* Assets.xcassets in Resources */,
 				353B44BE26E37F2D008607A5 /* Main.storyboard in Resources */,
 				353B451326E38D89008607A5 /* apiMarvel.der in Resources */,
+				35D0872626E6C8D2004B895C /* SquadView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -761,6 +783,7 @@
 				353B44EB26E37FF6008607A5 /* Reachability.swift in Sources */,
 				353B450626E38A84008607A5 /* NetworkProvider.swift in Sources */,
 				35B78A3926E5716C00784D46 /* UIColor+Hex.swift in Sources */,
+				35D0872B26E6CBB9004B895C /* SquadCell.swift in Sources */,
 				353B455726E3D45B008607A5 /* Superhero+ParseFromResponse.swift in Sources */,
 				353B450326E388C5008607A5 /* main.swift in Sources */,
 				353B454026E3C9E0008607A5 /* HeroesService.swift in Sources */,
@@ -769,6 +792,7 @@
 				353B44B926E37F2D008607A5 /* SceneDelegate.swift in Sources */,
 				353B454A26E3CE3F008607A5 /* MarvelResponse.swift in Sources */,
 				353B452426E39452008607A5 /* LocalCacheManager.swift in Sources */,
+				35D0872126E6C425004B895C /* SquadView.swift in Sources */,
 				353B451026E38BA9008607A5 /* ApiError.swift in Sources */,
 				353B44ED26E3808C008607A5 /* URLBuilder.swift in Sources */,
 				35B78A0C26E544FF00784D46 /* SuperheroEndpoint.swift in Sources */,
