@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3528B54826E5881F0023BFEF /* SquadViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3528B54726E5881F0023BFEF /* SquadViewContent.swift */; };
 		353B44B726E37F2D008607A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B44B626E37F2D008607A5 /* AppDelegate.swift */; };
 		353B44B926E37F2D008607A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B44B826E37F2D008607A5 /* SceneDelegate.swift */; };
 		353B44BE26E37F2D008607A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 353B44BC26E37F2D008607A5 /* Main.storyboard */; };
@@ -94,6 +95,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3528B54726E5881F0023BFEF /* SquadViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquadViewContent.swift; sourceTree = "<group>"; };
 		353B44B326E37F2D008607A5 /* SuperheroSquadMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperheroSquadMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		353B44B626E37F2D008607A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		353B44B826E37F2D008607A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -196,6 +198,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3528B54626E588030023BFEF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3528B54726E5881F0023BFEF /* SquadViewContent.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		353B44AA26E37F2D008607A5 = {
 			isa = PBXGroup;
 			children = (
@@ -463,6 +473,7 @@
 		353B457026E437FA008607A5 /* SuperHero */ = {
 			isa = PBXGroup;
 			children = (
+				3528B54626E588030023BFEF /* Views */,
 				353B457126E43875008607A5 /* SuperHeroViewController.swift */,
 				353B457326E43889008607A5 /* SuperHeroPresenter.swift */,
 				353B457526E43942008607A5 /* SuperHeroView.swift */,
@@ -769,6 +780,7 @@
 				353B44B926E37F2D008607A5 /* SceneDelegate.swift in Sources */,
 				353B454A26E3CE3F008607A5 /* MarvelResponse.swift in Sources */,
 				353B452426E39452008607A5 /* LocalCacheManager.swift in Sources */,
+				3528B54826E5881F0023BFEF /* SquadViewContent.swift in Sources */,
 				353B451026E38BA9008607A5 /* ApiError.swift in Sources */,
 				353B44ED26E3808C008607A5 /* URLBuilder.swift in Sources */,
 				35B78A0C26E544FF00784D46 /* SuperheroEndpoint.swift in Sources */,
