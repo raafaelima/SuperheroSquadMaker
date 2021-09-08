@@ -9,14 +9,16 @@ import Foundation
 
 extension SuperheroResponse {
     func parse() -> Superhero {
-        return Superhero(
-            id: self.id,
-            name: self.name,
-            description: self.description,
-            modified: self.modified,
-            thumbnailURL: thumbnailURL(),
-            profileImageURL: profileURL()
-        )
+        let hero = Superhero()
+
+        hero.id = self.id
+        hero.name = self.name
+        hero.biography = self.biography
+        hero.modified = self.modified
+        hero.thumbnailURL = thumbnailURL()
+        hero.profileImageURL = profileURL()
+
+        return hero
     }
 
     private func thumbnailURL() -> String {

@@ -11,14 +11,14 @@ struct SuperheroResponse: Codable {
 
     let id: Int
     let name: String
-    let description: String
+    let biography: String
     let modified: String
     let thumbnail: ThumbnailResponse?
 
     enum CodingKeys: String, CodingKey {
         case id = "id"
         case name = "name"
-        case description = "description"
+        case biography = "description"
         case modified = "modified"
         case thumbnail = "thumbnail"
     }
@@ -27,7 +27,7 @@ struct SuperheroResponse: Codable {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         id = try values.decode(Int.self, forKey: .id)
         name = try values.decode(String.self, forKey: .name)
-        description = try values.decode(String.self, forKey: .description)
+        biography = try values.decode(String.self, forKey: .biography)
         modified = try values.decode(String.self, forKey: .modified)
         thumbnail = try values.decodeIfPresent(ThumbnailResponse.self, forKey: .thumbnail)
     }

@@ -10,6 +10,7 @@ import UIKit
 class SuperHeroDetailsViewController: UIViewController {
 
     var superhero: Superhero!
+    var presenter: SuperHeroDetailsPresenter!
 
     // MARK: - Constants
     private let borderWidth: CGFloat = 3
@@ -29,6 +30,7 @@ class SuperHeroDetailsViewController: UIViewController {
         super.viewDidLoad()
 
         self.title = superhero.name
+        presenter = SuperHeroDetailsPresenter()
 
         loadHeroInformation()
         applyRecruitState()
@@ -40,10 +42,10 @@ class SuperHeroDetailsViewController: UIViewController {
         self.heroName.text = superhero.name
         self.heroImage.loadThumbnail(from: superhero.profileImageURL)
 
-        if superhero.description.isEmpty {
+        if superhero.biography.isEmpty {
             self.heroDescription.text = misteryDescription
         } else {
-            self.heroDescription.text = superhero.description
+            self.heroDescription.text = superhero.biography
         }
     }
 
@@ -71,7 +73,7 @@ class SuperHeroDetailsViewController: UIViewController {
 
     @IBAction func recruitOrFireSuperheroAction(_ sender: Any) {
         if !superhero.isHiredToSquad {
-            superhero.isHiredToSquad = true
+            presenter.updateHiringStatus(hero: superhero)
             applyRecruitState()
         } else {
             showFireHeroFromSquadAlert()
@@ -80,7 +82,7 @@ class SuperHeroDetailsViewController: UIViewController {
 
     private func showFireHeroFromSquadAlert() {
         let confirmFire = UIAlertAction(title: "Confirm", style: .default) { _ in
-            self.superhero.isHiredToSquad = false
+            self.presenter.updateHiringStatus(hero: self.superhero)
             self.applyRecruitState()
         }
 

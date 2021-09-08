@@ -74,6 +74,12 @@
 		35B78A3726E56A9700784D46 /* LocalCacheManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B78A3626E56A9700784D46 /* LocalCacheManagerTest.swift */; };
 		35B78A3926E5716C00784D46 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B78A3826E5716C00784D46 /* UIColor+Hex.swift */; };
 		35B78A3C26E579F400784D46 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B78A3B26E579F400784D46 /* AlertManager.swift */; };
+		35C8936526E94FF6003CB75D /* HeroRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C8936426E94FF6003CB75D /* HeroRepository.swift */; };
+		35C8936A26E96136003CB75D /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35C8936926E96136003CB75D /* Realm.framework */; };
+		35C8936E26E96176003CB75D /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35C8936D26E96176003CB75D /* RealmSwift.framework */; };
+		35C8937326E962E2003CB75D /* RealmFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C8937226E962E2003CB75D /* RealmFactory.swift */; };
+		35C8937526E963D9003CB75D /* Realm+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C8937426E963D9003CB75D /* Realm+Util.swift */; };
+		35C8937726E967ED003CB75D /* SuperHeroDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C8937626E967ED003CB75D /* SuperHeroDetailsPresenter.swift */; };
 		35D0872126E6C425004B895C /* SquadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D0871F26E6C425004B895C /* SquadView.swift */; };
 		35D0872626E6C8D2004B895C /* SquadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35D0872526E6C8D2004B895C /* SquadView.xib */; };
 		35D0872B26E6CBB9004B895C /* SquadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D0872926E6CBB9004B895C /* SquadCell.swift */; };
@@ -172,6 +178,12 @@
 		35B78A3626E56A9700784D46 /* LocalCacheManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheManagerTest.swift; sourceTree = "<group>"; };
 		35B78A3826E5716C00784D46 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		35B78A3B26E579F400784D46 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		35C8936426E94FF6003CB75D /* HeroRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroRepository.swift; sourceTree = "<group>"; };
+		35C8936926E96136003CB75D /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		35C8936D26E96176003CB75D /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		35C8937226E962E2003CB75D /* RealmFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmFactory.swift; sourceTree = "<group>"; };
+		35C8937426E963D9003CB75D /* Realm+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+Util.swift"; sourceTree = "<group>"; };
+		35C8937626E967ED003CB75D /* SuperHeroDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroDetailsPresenter.swift; sourceTree = "<group>"; };
 		35D0871F26E6C425004B895C /* SquadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquadView.swift; sourceTree = "<group>"; };
 		35D0872526E6C8D2004B895C /* SquadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SquadView.xib; sourceTree = "<group>"; };
 		35D0872926E6CBB9004B895C /* SquadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquadCell.swift; sourceTree = "<group>"; };
@@ -183,6 +195,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35C8936E26E96176003CB75D /* RealmSwift.framework in Frameworks */,
+				35C8936A26E96136003CB75D /* Realm.framework in Frameworks */,
 				358DD00526E4498D00092C32 /* Kingfisher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,9 +246,10 @@
 				35B78A0D26E5479700784D46 /* SuperHeroDetails */,
 				35D0871E26E6C33C004B895C /* Squad */,
 				353B455526E3D3E5008607A5 /* Extensions */,
-				353B454526E3CB5B008607A5 /* Model */,
 				353B453226E3BBF4008607A5 /* Configurations */,
 				353B451126E38D69008607A5 /* Certs */,
+				35C8935D26E94CA4003CB75D /* Data */,
+				353B451626E38ED9008607A5 /* Service */,
 				353B44E626E37F91008607A5 /* Network */,
 				353B44B626E37F2D008607A5 /* AppDelegate.swift */,
 				353B44B826E37F2D008607A5 /* SceneDelegate.swift */,
@@ -276,7 +291,6 @@
 			isa = PBXGroup;
 			children = (
 				353B454826E3CBCC008607A5 /* Response */,
-				353B451626E38ED9008607A5 /* Service */,
 				353B450726E38A93008607A5 /* Endpoint */,
 				353B450426E38A7D008607A5 /* Provider */,
 				353B44F326E381C6008607A5 /* Storage */,
@@ -401,14 +415,6 @@
 			path = Configurations;
 			sourceTree = "<group>";
 		};
-		353B454526E3CB5B008607A5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				353B454626E3CB70008607A5 /* Superhero.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		353B454826E3CBCC008607A5 /* Response */ = {
 			isa = PBXGroup;
 			children = (
@@ -428,6 +434,7 @@
 				358DD00626E449BE00092C32 /* UIImageView+LoadThumbnail.swift */,
 				358DD00826E455B800092C32 /* UIImageView+CircleMask.swift */,
 				35B78A3826E5716C00784D46 /* UIColor+Hex.swift */,
+				35C8937426E963D9003CB75D /* Realm+Util.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -483,6 +490,8 @@
 		358DD00326E4498D00092C32 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				35C8936D26E96176003CB75D /* RealmSwift.framework */,
+				35C8936926E96136003CB75D /* Realm.framework */,
 				358DD00426E4498D00092C32 /* Kingfisher.framework */,
 			);
 			name = Frameworks;
@@ -492,6 +501,7 @@
 			isa = PBXGroup;
 			children = (
 				35B78A1326E54D6800784D46 /* SuperHeroDetailsViewController.swift */,
+				35C8937626E967ED003CB75D /* SuperHeroDetailsPresenter.swift */,
 			);
 			path = SuperHeroDetails;
 			sourceTree = "<group>";
@@ -587,6 +597,40 @@
 				35B78A3426E5692B00784D46 /* ReachabilityMock.swift */,
 			);
 			path = Mock;
+			sourceTree = "<group>";
+		};
+		35C8935D26E94CA4003CB75D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				35C8936626E954A3003CB75D /* Model */,
+				35C8935F26E94DEF003CB75D /* Database */,
+				35C8935E26E94CBF003CB75D /* Repository */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		35C8935E26E94CBF003CB75D /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				35C8936426E94FF6003CB75D /* HeroRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		35C8935F26E94DEF003CB75D /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				35C8937226E962E2003CB75D /* RealmFactory.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		35C8936626E954A3003CB75D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				353B454626E3CB70008607A5 /* Superhero.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		35D0871E26E6C33C004B895C /* Squad */ = {
@@ -743,6 +787,8 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/build/iOS/Kingfisher.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 			);
 			name = "Copy Carthage Frameworks";
 			outputFileListPaths = (
@@ -762,9 +808,11 @@
 			files = (
 				353B454C26E3CEA9008607A5 /* MarvelData.swift in Sources */,
 				353B457226E43875008607A5 /* SuperHeroViewController.swift in Sources */,
+				35C8937726E967ED003CB75D /* SuperHeroDetailsPresenter.swift in Sources */,
 				353B457426E43889008607A5 /* SuperHeroPresenter.swift in Sources */,
 				353B450E26E38B1E008607A5 /* Endpoint+UrlRequest.swift in Sources */,
 				353B454726E3CB70008607A5 /* Superhero.swift in Sources */,
+				35C8936526E94FF6003CB75D /* HeroRepository.swift in Sources */,
 				358DD00726E449BE00092C32 /* UIImageView+LoadThumbnail.swift in Sources */,
 				353B454426E3CA28008607A5 /* AllHeroesEndpoint.swift in Sources */,
 				353B44B726E37F2D008607A5 /* AppDelegate.swift in Sources */,
@@ -784,6 +832,7 @@
 				353B450626E38A84008607A5 /* NetworkProvider.swift in Sources */,
 				35B78A3926E5716C00784D46 /* UIColor+Hex.swift in Sources */,
 				35D0872B26E6CBB9004B895C /* SquadCell.swift in Sources */,
+				35C8937326E962E2003CB75D /* RealmFactory.swift in Sources */,
 				353B455726E3D45B008607A5 /* Superhero+ParseFromResponse.swift in Sources */,
 				353B450326E388C5008607A5 /* main.swift in Sources */,
 				353B454026E3C9E0008607A5 /* HeroesService.swift in Sources */,
@@ -795,6 +844,7 @@
 				35D0872126E6C425004B895C /* SquadView.swift in Sources */,
 				353B451026E38BA9008607A5 /* ApiError.swift in Sources */,
 				353B44ED26E3808C008607A5 /* URLBuilder.swift in Sources */,
+				35C8937526E963D9003CB75D /* Realm+Util.swift in Sources */,
 				35B78A0C26E544FF00784D46 /* SuperheroEndpoint.swift in Sources */,
 				353B44F026E38198008607A5 /* CacheManager.swift in Sources */,
 			);

@@ -79,8 +79,8 @@ extension SquadView: UICollectionViewDataSource, UICollectionViewDelegate {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! SquadCell
-        cell.initView(hero: squadDataSource[indexPath.row])
-        return cell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as? SquadCell
+        cell?.initView(hero: squadDataSource[indexPath.row])
+        return cell!
     }
 }

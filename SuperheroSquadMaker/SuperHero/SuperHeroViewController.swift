@@ -27,6 +27,12 @@ class SuperHeroViewController: UITableViewController, SuperHeroView {
         self.presenter?.getAllHeroes()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.squadDataSource = presenter?.getSquad() ?? []
+        self.tableView.reloadData()
+    }
+
     // MARK: - Loading Views
 
     private func setupActivityIndicator() {
@@ -63,21 +69,25 @@ class SuperHeroViewController: UITableViewController, SuperHeroView {
     // MARK: - Delegate Methods
 
     func loadHeroes(heroes: [Superhero]) {
-        self.heroesDataSource = heroes
-        // TODO: Remove after implement persistence mechanism
-        self.squadDataSource = heroes
-        self.tableView.reloadData()
-        self.removeLoadingView()
+        OperationQueue.main.addOperation({
+            self.heroesDataSource = heroes
+            self.tableView.reloadData()
+            self.removeLoadingView()
+        })
     }
 
     func showErrorAtLoadingHeroes() {
-        self.removeLoadingView()
-        showNoDataConectionAlert()
+        OperationQueue.main.addOperation({
+            self.removeLoadingView()
+            self.showNoDataConectionAlert()
+        })
     }
 
     func showEmptyDatasetMessage() {
-        self.removeLoadingView()
-        showNoInformationAlert()
+        OperationQueue.main.addOperation({
+            self.removeLoadingView()
+            self.showNoInformationAlert()
+        })
     }
 
     private func showNoDataConectionAlert() {
