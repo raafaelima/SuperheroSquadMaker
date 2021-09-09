@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SuperHeroViewController: UITableViewController, SuperHeroView {
+class SuperHeroViewController: UITableViewController, SuperHeroView, Storyboarded {
 
     private var isLoading = false
     private let loadingView: UIView = UIView()
@@ -16,6 +16,8 @@ class SuperHeroViewController: UITableViewController, SuperHeroView {
     internal var presenter: SuperHeroPresenter?
     internal var heroesDataSource = [Superhero]()
     internal var squadDataSource = [Superhero]()
+
+    weak var coordinator: MainCoordinator?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,18 +54,6 @@ class SuperHeroViewController: UITableViewController, SuperHeroView {
     private func removeLoadingView() {
         self.activityIndicatorView.stopAnimating()
         self.loadingView.removeFromSuperview()
-    }
-
-    // MARK: - Navigation
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showHeroDetails" {
-            if let indexPath = tableView.indexPathForSelectedRow {
-                let detailsVC = segue.destination as? SuperHeroDetailsViewController
-                let hero = heroesDataSource[indexPath.row]
-                detailsVC?.superhero = hero
-            }
-        }
     }
 
     // MARK: - Delegate Methods
@@ -119,6 +109,7 @@ class SuperHeroViewController: UITableViewController, SuperHeroView {
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if isAnyHeroHired() {
             let squadView = SquadView()
+            squadView.coordinator = coordinator
             squadView.loadSquad(squad: squadDataSource)
             return squadView
         } else {
@@ -131,7 +122,8 @@ class SuperHeroViewController: UITableViewController, SuperHeroView {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showHeroDetails", sender: nil)
+        let hero = heroesDataSource[indexPath.row]
+        self.coordinator?.details(of: hero)
     }
 
     private func isAnyHeroHired() -> Bool {

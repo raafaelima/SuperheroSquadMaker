@@ -7,10 +7,11 @@
 
 import UIKit
 
-class SuperHeroDetailsViewController: UIViewController {
+class SuperHeroDetailsViewController: UIViewController, Storyboarded {
 
     var superhero: Superhero!
     var presenter: SuperHeroDetailsPresenter!
+    weak var coordinator: MainCoordinator?
 
     // MARK: - Constants
     private let borderWidth: CGFloat = 3

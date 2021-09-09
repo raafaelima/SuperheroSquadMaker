@@ -7,7 +7,13 @@
 
 import UIKit
 
+private class SquadTapGesture: UITapGestureRecognizer {
+    var hero: Superhero?
+}
+
 class SquadView: UIView {
+
+    weak var coordinator: MainCoordinator?
 
     private var squadDataSource = [Superhero]()
     private let cellIdentifier = "SquadCell"
@@ -38,6 +44,8 @@ class SquadView: UIView {
         collectionView.register(nib, forCellWithReuseIdentifier: cellIdentifier)
         collectionView.dataSource = self
         collectionView.collectionViewLayout = horizontalLayout()
+        collectionView.isUserInteractionEnabled = true
+        collectionView.allowsSelection = true
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     }
 
@@ -80,7 +88,22 @@ extension SquadView: UICollectionViewDataSource, UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as? SquadCell
-        cell?.initView(hero: squadDataSource[indexPath.row])
+
+        let hero = squadDataSource[indexPath.row]
+
+        let tap = SquadTapGesture(target: self, action: #selector(navigateToDetails(sender:)))
+        tap.hero = hero
+        tap.cancelsTouchesInView = false
+
+        cell?.initView(hero: hero)
+        cell?.addGestureRecognizer(tap)
         return cell!
+    }
+
+    @objc
+    private func navigateToDetails(sender: SquadTapGesture) {
+        if let hero = sender.hero {
+            coordinator?.details(of: hero)
+        }
     }
 }
