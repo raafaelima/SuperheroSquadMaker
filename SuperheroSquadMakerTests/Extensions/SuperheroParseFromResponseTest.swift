@@ -31,7 +31,7 @@ class SuperheroParseFromResponseTest: XCTestCase {
         let model = sut.parse()
         XCTAssertEqual(model.id, sut.id)
         XCTAssertEqual(model.name, sut.name)
-        XCTAssertEqual(model.description, sut.description)
+        XCTAssertEqual(model.biography, sut.biography)
         XCTAssertEqual(model.modified, sut.modified)
     }
 

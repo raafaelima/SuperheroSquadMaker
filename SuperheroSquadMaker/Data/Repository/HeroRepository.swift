@@ -8,7 +8,7 @@
 import Foundation
 import RealmSwift
 
-struct HeroRepository {
+class HeroRepository {
 
     private let database = RealmFactory.database()
 

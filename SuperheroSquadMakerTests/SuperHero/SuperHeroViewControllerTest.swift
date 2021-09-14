@@ -17,7 +17,7 @@ class SuperHeroViewControllerTest: XCTestCase {
         super.setUp()
 
         let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let mainViewController = storyBoard.instantiateViewController(withIdentifier: "superheroesVC") as? SuperHeroViewController
+        let mainViewController = storyBoard.instantiateViewController(withIdentifier: "SuperHeroViewController") as? SuperHeroViewController
 
         let navigationController = UINavigationController()
         navigationController.viewControllers.append(mainViewController!)
@@ -41,13 +41,12 @@ class SuperHeroViewControllerTest: XCTestCase {
     }
 
     func testPrepareForSegueSetTheResultDelegateOnTheHeroDetailsVC() throws {
-        let destinationVC = SuperHeroDetailsViewController()
-        let segue = UIStoryboardSegue(identifier: "showHeroDetails", source: sut, destination: destinationVC)
+        let mockCoordinator = MainCoordinatorMock(navigationController: UINavigationController())
+        sut.coordinator = mockCoordinator
 
         sut.tableView.selectRow(at: IndexPath(row: 0, section: 0), animated: false, scrollPosition: .none)
-        sut.prepare(for: segue, sender: nil)
 
-        XCTAssertNotNil(destinationVC.superhero)
+        XCTAssertNotNil(mockCoordinator.didCallDetails)
     }
 
     func testTableViewHaveTheCorrectAmmountOfRows() throws {

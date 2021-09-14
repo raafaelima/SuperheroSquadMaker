@@ -19,7 +19,7 @@ class SuperHeroDetailsViewControllerTest: XCTestCase {
         super.setUp()
 
         let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let mainViewController = storyBoard.instantiateViewController(withIdentifier: "superheroDetailsVC") as? SuperHeroDetailsViewController
+        let mainViewController = storyBoard.instantiateViewController(withIdentifier: "SuperHeroDetailsViewController") as? SuperHeroDetailsViewController
 
         let navigationController = UINavigationController()
         navigationController.viewControllers.append(mainViewController!)

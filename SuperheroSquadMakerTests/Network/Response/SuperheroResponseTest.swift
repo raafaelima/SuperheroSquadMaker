@@ -23,7 +23,7 @@ class SuperheroResponseTest: XCTestCase {
     func testResponseWillParseTheCorrectDataFromServerResponse() throws {
         XCTAssertEqual(sut.id, 1017100)
         XCTAssertEqual(sut.name, "A-Bomb (HAS)")
-        XCTAssertTrue(sut.description.contains("Rick Jones has been Hulk's best bud since day one"))
+        XCTAssertTrue(sut.biography.contains("Rick Jones has been Hulk's best bud since day one"))
         XCTAssertNotNil(sut.thumbnail)
     }
 }

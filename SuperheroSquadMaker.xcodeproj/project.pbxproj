@@ -55,6 +55,8 @@
 		353B457426E43889008607A5 /* SuperHeroPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B457326E43889008607A5 /* SuperHeroPresenter.swift */; };
 		353B457626E43942008607A5 /* SuperHeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B457526E43942008607A5 /* SuperHeroView.swift */; };
 		353B457826E43CE4008607A5 /* SuperHeroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B457726E43CE4008607A5 /* SuperHeroTableViewCell.swift */; };
+		3549157526F0FEBE0022FA12 /* MainCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3549157426F0FEBE0022FA12 /* MainCoordinatorMock.swift */; };
+		3549157926F1014B0022FA12 /* HeroRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3549157826F1014B0022FA12 /* HeroRepositoryMock.swift */; };
 		358DD00526E4498D00092C32 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 358DD00426E4498D00092C32 /* Kingfisher.framework */; };
 		358DD00726E449BE00092C32 /* UIImageView+LoadThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358DD00626E449BE00092C32 /* UIImageView+LoadThumbnail.swift */; };
 		358DD00926E455B800092C32 /* UIImageView+CircleMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358DD00826E455B800092C32 /* UIImageView+CircleMask.swift */; };
@@ -162,6 +164,8 @@
 		353B457326E43889008607A5 /* SuperHeroPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroPresenter.swift; sourceTree = "<group>"; };
 		353B457526E43942008607A5 /* SuperHeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroView.swift; sourceTree = "<group>"; };
 		353B457726E43CE4008607A5 /* SuperHeroTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroTableViewCell.swift; sourceTree = "<group>"; };
+		3549157426F0FEBE0022FA12 /* MainCoordinatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorMock.swift; sourceTree = "<group>"; };
+		3549157826F1014B0022FA12 /* HeroRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroRepositoryMock.swift; sourceTree = "<group>"; };
 		358DD00426E4498D00092C32 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		358DD00626E449BE00092C32 /* UIImageView+LoadThumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+LoadThumbnail.swift"; sourceTree = "<group>"; };
 		358DD00826E455B800092C32 /* UIImageView+CircleMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+CircleMask.swift"; sourceTree = "<group>"; };
@@ -271,10 +275,12 @@
 		353B44CC26E37F2F008607A5 /* SuperheroSquadMakerTests */ = {
 			isa = PBXGroup;
 			children = (
+				3549157226F0FE9F0022FA12 /* Coordinator */,
 				35B78A1E26E564F100784D46 /* SuperHeroDetails */,
 				35B78A1926E55FBF00784D46 /* SuperHero */,
 				353B456026E3DD56008607A5 /* Helpers */,
 				353B455D26E3DC88008607A5 /* JSONMocks */,
+				3549157626F101230022FA12 /* Data */,
 				353B455A26E3DC13008607A5 /* Extensions */,
 				353B453326E3BC65008607A5 /* Configurations */,
 				353B452B26E3A286008607A5 /* Network */,
@@ -492,6 +498,38 @@
 				353B457726E43CE4008607A5 /* SuperHeroTableViewCell.swift */,
 			);
 			path = SuperHero;
+			sourceTree = "<group>";
+		};
+		3549157226F0FE9F0022FA12 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				3549157326F0FEA80022FA12 /* Mock */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		3549157326F0FEA80022FA12 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				3549157426F0FEBE0022FA12 /* MainCoordinatorMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		3549157626F101230022FA12 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3549157726F101400022FA12 /* Mock */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		3549157726F101400022FA12 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				3549157826F1014B0022FA12 /* HeroRepositoryMock.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		358DD00326E4498D00092C32 /* Frameworks */ = {
@@ -876,6 +914,7 @@
 			files = (
 				353B44FF26E38871008607A5 /* TestingSceneDelegate.swift in Sources */,
 				353B454226E3CA1B008607A5 /* UrlBuilderTest.swift in Sources */,
+				3549157526F0FEBE0022FA12 /* MainCoordinatorMock.swift in Sources */,
 				35B78A2726E566A000784D46 /* SuperHeroPresenterTest.swift in Sources */,
 				35B78A2526E565B800784D46 /* HeroesServiceMock.swift in Sources */,
 				353B456D26E433A0008607A5 /* MarvelDataTest.swift in Sources */,
@@ -884,6 +923,7 @@
 				353B44FD26E3885A008607A5 /* TestingAppDelegate.swift in Sources */,
 				35B78A2126E5651500784D46 /* SuperHeroViewControllerMock.swift in Sources */,
 				35B78A1B26E55FD500784D46 /* SuperHeroViewControllerTest.swift in Sources */,
+				3549157926F1014B0022FA12 /* HeroRepositoryMock.swift in Sources */,
 				35B78A2926E5679E00784D46 /* HeroesServiceTest.swift in Sources */,
 				35B78A1D26E561E400784D46 /* SuperHeroDetailsViewControllerTest.swift in Sources */,
 				35B78A1026E5482300784D46 /* AllHeroesEndpointTest.swift in Sources */,
