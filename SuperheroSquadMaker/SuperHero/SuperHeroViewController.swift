@@ -24,7 +24,6 @@ class SuperHeroViewController: UITableViewController, SuperHeroView, Storyboarde
         self.title = "Marvel"
 
         self.setupActivityIndicator()
-
         self.presenter = SuperHeroPresenter(delegate: self)
         self.presenter?.getAllHeroes()
     }

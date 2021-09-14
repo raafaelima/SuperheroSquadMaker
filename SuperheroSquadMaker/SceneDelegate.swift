@@ -19,6 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
         let navController = UINavigationController()
+        navController.navigationBar.barTintColor = UIColor(hex: "#22252Bff")
+
         coordinator = MainCoordinator(navigationController: navController)
         coordinator?.start()
 
