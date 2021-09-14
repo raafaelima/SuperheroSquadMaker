@@ -8,6 +8,6 @@
 import Foundation
 
 protocol CacheManager {
-    func load(from file: String) -> Data
-    func save(onCache data: Data, at file: String)
+    func load() -> Data
+    func save(onCache data: Data)
 }

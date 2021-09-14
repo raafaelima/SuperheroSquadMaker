@@ -22,9 +22,9 @@ class LocalCacheManagerTest: XCTestCase {
         let myText = "Some text to write to file"
         let data = Data(myText.utf8)
 
-        sut.save(onCache: data, at: "mock.json")
+        sut.save(onCache: data)
 
-        let cache = String(decoding: sut.load(from: "mock.json"), as: UTF8.self)
+        let cache = String(decoding: sut.load(), as: UTF8.self)
         XCTAssertTrue(cache.contains("Some text"))
     }
 }

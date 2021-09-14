@@ -14,12 +14,12 @@ class CacheManagerMock: CacheManager {
     var didCallLoad = false
     var didCallSave = false
 
-    func load(from file: String) -> Data {
+    func load() -> Data {
         didCallSave = true
         return Data()
     }
 
-    func save(onCache data: Data, at file: String) {
+    func save(onCache data: Data) {
         didCallLoad = true
     }
 }

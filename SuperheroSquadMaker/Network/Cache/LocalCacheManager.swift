@@ -9,23 +9,24 @@ import Foundation
 
 struct LocalCacheManager: CacheManager {
 
+    private let cacheFile = "local_cache.json"
     private var storageManager: StorageManager
 
     init(storageManager: StorageManager = FileStorageManager()) {
         self.storageManager = storageManager
     }
 
-    func save(onCache data: Data, at file: String) {
+    func save(onCache data: Data) {
         do {
-            try storageManager.save(data: data, on: file)
+            try storageManager.save(data: data, on: cacheFile)
         } catch {
             print(error.localizedDescription)
         }
     }
 
-    func load(from file: String) -> Data {
+    func load() -> Data {
         do {
-            return try storageManager.load(from: file)
+            return try storageManager.load(from: cacheFile)
         } catch {
             return Data()
         }

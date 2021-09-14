@@ -28,20 +28,16 @@ struct URLSessionNetworkProvider: NetworkProvider {
                 return
             }
 
-            // TODO: Define location of cache being saved
-            // self.cacheManager.save(onCache: receivedData, at: "")
+            self.cacheManager.save(onCache: receivedData)
             self.process(data: receivedData, completion)
         }
 
         remoteDataTask.resume()
 
-        /*
-         if self.reachability.currentStatus() == .notReachable {
-         // TODO: Define location of cache being loaded
-         let cachedData = cacheManager.load(from: "")
-         process(data: cachedData, completion)
-         }
-         */
+        if self.reachability.currentStatus() == .notReachable {
+            let cachedData = cacheManager.load()
+            process(data: cachedData, completion)
+        }
     }
 
     private func process<T: Codable>(data: Data, _ completion: @escaping (Result<T, ApiError>) -> Void) {
