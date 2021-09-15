@@ -57,6 +57,11 @@
 		353B457826E43CE4008607A5 /* SuperHeroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B457726E43CE4008607A5 /* SuperHeroTableViewCell.swift */; };
 		3549157526F0FEBE0022FA12 /* MainCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3549157426F0FEBE0022FA12 /* MainCoordinatorMock.swift */; };
 		3549157926F1014B0022FA12 /* HeroRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3549157826F1014B0022FA12 /* HeroRepositoryMock.swift */; };
+		3549157B26F236850022FA12 /* SuperHeroDetailsPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3549157A26F236850022FA12 /* SuperHeroDetailsPresenterTest.swift */; };
+		3549157E26F237CD0022FA12 /* RealmFactoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3549157D26F237CD0022FA12 /* RealmFactoryTest.swift */; };
+		3549157F26F239190022FA12 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35C8936926E96136003CB75D /* Realm.framework */; };
+		3549158026F239190022FA12 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35C8936D26E96176003CB75D /* RealmSwift.framework */; };
+		3549158126F239190022FA12 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 358DD00426E4498D00092C32 /* Kingfisher.framework */; };
 		358DD00526E4498D00092C32 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 358DD00426E4498D00092C32 /* Kingfisher.framework */; };
 		358DD00726E449BE00092C32 /* UIImageView+LoadThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358DD00626E449BE00092C32 /* UIImageView+LoadThumbnail.swift */; };
 		358DD00926E455B800092C32 /* UIImageView+CircleMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358DD00826E455B800092C32 /* UIImageView+CircleMask.swift */; };
@@ -166,6 +171,8 @@
 		353B457726E43CE4008607A5 /* SuperHeroTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroTableViewCell.swift; sourceTree = "<group>"; };
 		3549157426F0FEBE0022FA12 /* MainCoordinatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorMock.swift; sourceTree = "<group>"; };
 		3549157826F1014B0022FA12 /* HeroRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroRepositoryMock.swift; sourceTree = "<group>"; };
+		3549157A26F236850022FA12 /* SuperHeroDetailsPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroDetailsPresenterTest.swift; sourceTree = "<group>"; };
+		3549157D26F237CD0022FA12 /* RealmFactoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmFactoryTest.swift; sourceTree = "<group>"; };
 		358DD00426E4498D00092C32 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		358DD00626E449BE00092C32 /* UIImageView+LoadThumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+LoadThumbnail.swift"; sourceTree = "<group>"; };
 		358DD00826E455B800092C32 /* UIImageView+CircleMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+CircleMask.swift"; sourceTree = "<group>"; };
@@ -215,6 +222,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3549157F26F239190022FA12 /* Realm.framework in Frameworks */,
+				3549158026F239190022FA12 /* RealmSwift.framework in Frameworks */,
+				3549158126F239190022FA12 /* Kingfisher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,6 +529,7 @@
 		3549157626F101230022FA12 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				3549157C26F237BE0022FA12 /* Database */,
 				3549157726F101400022FA12 /* Mock */,
 			);
 			path = Data;
@@ -530,6 +541,14 @@
 				3549157826F1014B0022FA12 /* HeroRepositoryMock.swift */,
 			);
 			path = Mock;
+			sourceTree = "<group>";
+		};
+		3549157C26F237BE0022FA12 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				3549157D26F237CD0022FA12 /* RealmFactoryTest.swift */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 		358DD00326E4498D00092C32 /* Frameworks */ = {
@@ -574,6 +593,7 @@
 			isa = PBXGroup;
 			children = (
 				35B78A1C26E561E400784D46 /* SuperHeroDetailsViewControllerTest.swift */,
+				3549157A26F236850022FA12 /* SuperHeroDetailsPresenterTest.swift */,
 			);
 			path = SuperHeroDetails;
 			sourceTree = "<group>";
@@ -926,9 +946,11 @@
 				3549157926F1014B0022FA12 /* HeroRepositoryMock.swift in Sources */,
 				35B78A2926E5679E00784D46 /* HeroesServiceTest.swift in Sources */,
 				35B78A1D26E561E400784D46 /* SuperHeroDetailsViewControllerTest.swift in Sources */,
+				3549157E26F237CD0022FA12 /* RealmFactoryTest.swift in Sources */,
 				35B78A1026E5482300784D46 /* AllHeroesEndpointTest.swift in Sources */,
 				353B456226E3DD67008607A5 /* JSONHelper.swift in Sources */,
 				353B450126E3888D008607A5 /* TestingRootViewController.swift in Sources */,
+				3549157B26F236850022FA12 /* SuperHeroDetailsPresenterTest.swift in Sources */,
 				35B78A2D26E567D100784D46 /* URLSessionNetworkProviderMock.swift in Sources */,
 				353B455C26E3DC24008607A5 /* SuperheroParseFromResponseTest.swift in Sources */,
 				35B78A3526E5692B00784D46 /* ReachabilityMock.swift in Sources */,
@@ -1148,6 +1170,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SuperheroSquadMakerTests/Configurations/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1169,6 +1195,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SuperheroSquadMakerTests/Configurations/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1311,6 +1341,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SuperheroSquadMaker/Configurations/Local.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
