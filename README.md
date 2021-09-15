@@ -58,5 +58,12 @@ ImageManagement
 >make
 >```
 
+## Improvement Points
+
+- Infinite scroll at the heroes list
+- Add UI tests to validate the flows of add/remove hero to the squad
+- UX and error messages
+- i18n the strings.
+
 ## References
 [PACT](https://www.thoughtworks.com/pt/insights/blog/write-quality-mobile-apps-any-architecture)
